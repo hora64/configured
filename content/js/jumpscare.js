@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     // Function to show the jump scare in a new window
     function showJumpScare() {
-        $.get('../windows/jumpscare.html', function(data) {
+        $.get('content/windows/jumpscare.html', function(data) {
             var scareWindow = window.open('', 'jumpScareWindow', 'width=800,height=600');
             scareWindow.document.write(data);
             playSound();
