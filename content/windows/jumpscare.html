@@ -20,14 +20,14 @@
     </style>
 </head>
 <body>
-    <img id="scareImage" src="images/jumpscare.jpg" alt="Jump Scare">
+    <img id="scareImage" src="content/assets/images/jumpscare.jpg" alt="Jump Scare">
     <script>
         // Show the scare image after a random delay between 3-5 seconds
         var delay = Math.random() * 2000 + 3000;
         setTimeout(function() {
             document.getElementById('scareImage').style.display = 'block';
             // Play the sound
-            var audio = new Audio('audio/scary-sound.mp3');
+            var audio = new Audio('content/assets/audio/SHRIEK.wav');
             audio.play();
         }, delay);
     </script>
