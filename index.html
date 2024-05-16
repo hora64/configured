@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>configured</title>
+    <title>Configured</title>
     <link rel="icon" href="content/assets/images/Icons/configured.png" type="image/png" sizes="256x256">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="content/css/styles.css">
 </head>
 <body>
-    <header>
-        <h1 class="handwritten">Welcome to My Website</h1>
-    </header>
-    <main>
-        <section>
-            <h2 class="handwritten">About Us</h2>
-            <p class="handwritten">We are dedicated to providing the best service possible.</p>
-        </section>
-        <section>
-            <h2 class="handwritten">Our Services</h2>
-            <p class="handwritten">Explore the variety of services we offer to meet your needs.</p>
-        </section>
-    </main>
-    <footer>
-        <p class="handwritten">&copy; 2024 Your Company. All rights reserved.</p>
-    </footer>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div id="mainContent"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#mainContent").load("content/mainContent.html", function() {
+                // Function to show the jump scare in a new window
+                function showJumpScare() {
+                    $.get('content/windowsjumpscare.html', function(data) {
+                        var scareWindow = window.open('', 'jumpScareWindow', 'width=800,height=600');
+                        scareWindow.document.write(data);
+                        scareWindow.document.close(); // Close the document to finish loading
+
+                        // Close the scare window after 6 seconds
+                        setTimeout(function() {
+                            scareWindow.close();
+                        }, 6000); // 3-5 seconds delay + 3 seconds for the scare
+                    });
+                }
+
+                // 1/10 chance to trigger the jump scare
+                if (Math.random() < 0.1) {
+                    showJumpScare();
+                }
+            });
+        });
+    </script>
     <script src="content/js/randomizeText.js"></script>
-    <script src="content/js/jumpscare.js"></script>
 </body>
 </html>
