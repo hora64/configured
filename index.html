@@ -13,10 +13,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            $("#mainContent").load("content/mainContent.html", function() {
+            $("#mainContent").load("content/windows/main.html", function() {
                 // Function to show the jump scare in a new window
                 function showJumpScare() {
-                    $.get('content/windowsjumpscare.html', function(data) {
+                    $.get('content/windows/jumpscare.html', function(data) {
                         var scareWindow = window.open('', 'jumpScareWindow', 'width=800,height=600');
                         scareWindow.document.write(data);
                         scareWindow.document.close(); // Close the document to finish loading
