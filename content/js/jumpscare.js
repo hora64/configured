@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // Function to play a scary sound
     function playSound() {
-        var audio = new Audio('../assets/audio/SHRIEK.wav');
+        var audio = new Audio('content/assets/audio/SHRIEK.wav');
         audio.play();
     }
 
