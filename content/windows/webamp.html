@@ -1,0 +1,43 @@
+<body>
+	<div id="winamp-container"></div>
+	<script>
+		const Webamp = window.Webamp;
+		const webamp = new Webamp({
+			initialSkin: {
+				url: "content/assets/skins/Blair_witch-1.wsz"
+			},  availableSkins: [
+		{ url: "content/assets/skins/Blair_witch-1.wsz", name: "Skin #1" },	  
+    { url: "content/assets/skins/Blair_witch-2.wsz", name: "Skin #2" },
+    { url: "content/assets/skins/Blair_witch-3.wsz", name: "Skin #3" },
+    { url: "content/assets/skins/msnMessager.wsz", name: "MSN Messanger"}
+  ],
+			__initialWindowLayout: {
+				main: {
+					position: {
+						x: 0,
+						y: 0
+					}
+				},
+				equalizer: {
+					position: {
+						x: 0,
+						y: 116
+					}
+				},
+				playlist: {
+					position: {
+						x: 0,
+						y: 232
+					},
+					size: [0, 4]
+				}
+			},
+		});
+		// If you want to handle the case when Webamp is not supported
+		if (!Webamp.browserIsSupported()) {
+			alert("Webamp is not supported in your browser.");
+		}
+		webamp.renderWhenReady(document.getElementById('winamp-container'));
+	</script>
+	<script src="https://unpkg.com/webamp@1.5.0/built/webamp.bundle.min.js"></script>
+</body>
