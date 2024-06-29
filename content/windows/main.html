@@ -169,18 +169,18 @@
             });
           }
         });
-
+  
         function isOverlapping(elem1, elem2, minDistance) {
           const rect1 = elem1.getBoundingClientRect();
           const rect2 = elem2.getBoundingClientRect();
-          
+  
           const dx = rect1.left - rect2.left;
           const dy = rect1.top - rect2.top;
           const distance = Math.sqrt(dx * dx + dy * dy);
-
+  
           return distance < minDistance;
         }
-
+  
         function positionElements(elements, minDistance) {
           elements.forEach((group, index) => {
             let attempts = 0;
@@ -192,13 +192,13 @@
               const maxLeft = containerWidth * 0.7 - group.offsetWidth;
               const minTop = containerHeight * 0.15;
               const minLeft = containerWidth * 0.15;
-
-              const randomTop = Math.random() * maxTop + minTop;
-              const randomLeft = Math.random() * maxLeft + minLeft;
-
+  
+              const randomTop = Math.random() * (maxTop - minTop) + minTop;
+              const randomLeft = Math.random() * (maxLeft - minLeft) + minLeft;
+  
               group.style.top = `${randomTop}px`;
               group.style.left = `${randomLeft}px`;
-
+  
               overlap = false;
               for (let i = 0; i < index; i++) {
                 if (isOverlapping(group, elements[i], minDistance)) {
@@ -206,17 +206,59 @@
                   break;
                 }
               }
-
+  
               attempts++;
             } while (overlap && attempts < 100);
           });
         }
-
+  
         const socialGroups = document.querySelectorAll('.social-group');
         positionElements(socialGroups, 200); // Increase minimum distance to 200px
       });
     }
-
+  
+    function isOverlapping(elem1, elem2, minDistance) {
+      const rect1 = elem1.getBoundingClientRect();
+      const rect2 = elem2.getBoundingClientRect();
+  
+      const dx = rect1.left - rect2.left;
+      const dy = rect1.top - rect2.top;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+  
+      return distance < minDistance;
+    }
+  
+    function positionElements(elements, minDistance) {
+      elements.forEach((group, index) => {
+        let attempts = 0;
+        let overlap;
+        do {
+          const containerHeight = window.innerHeight;
+          const containerWidth = window.innerWidth * 0.8; // Use 80% of the page width
+          const maxTop = containerHeight * 0.7 - group.offsetHeight;
+          const maxLeft = containerWidth * 0.7 - group.offsetWidth;
+          const minTop = containerHeight * 0.15;
+          const minLeft = containerWidth * 0.15;
+  
+          const randomTop = Math.random() * (maxTop - minTop) + minTop;
+          const randomLeft = Math.random() * (maxLeft - minLeft) + minLeft;
+  
+          group.style.top = `${randomTop}px`;
+          group.style.left = `${randomLeft}px`;
+  
+          overlap = false;
+          for (let i = 0; i < index; i++) {
+            if (isOverlapping(group, elements[i], minDistance)) {
+              overlap = true;
+              break;
+            }
+          }
+  
+          attempts++;
+        } while (overlap && attempts < 100);
+      });
+    }
+  
     document.addEventListener('DOMContentLoaded', () => {
       const socialGroups = document.querySelectorAll('.social-group');
       socialGroups.forEach(socialLinks => {
@@ -233,10 +275,11 @@
           });
         }
       });
-
+  
       positionElements(socialGroups, 200); // Increase minimum distance to 200px
     });
   </script>
+  
 
 </body>
 </html>
