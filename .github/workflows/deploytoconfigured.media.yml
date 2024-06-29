@@ -15,9 +15,10 @@ jobs:
       run: |
         rm -rf configured.media/*
 
-    - name: Copy Content to Configured Media Folder
+    - name: Copy Content Folder to Configured Media Folder
       run: |
-        cp -r content/* configured.media/
+        mkdir -p configured.media
+        cp -r content configured.media/
 
     - name: Copy Index.html to Configured Media Folder
       run: |
