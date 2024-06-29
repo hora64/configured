@@ -55,10 +55,12 @@
          transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1)) scale(1.1);
       }
       .social-links .single-icon {
-         transform: translateY(30px) !important;
+         transform: none !important;
+         position: static;
+         margin-top: 30px; /* 30px below the center */
       }
       .social-links .single-icon:hover {
-         transform: translateY(30px) scale(1.1) !important;
+         transform: scale(1.1) !important;
       }
       strong {
          position: absolute;

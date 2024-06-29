@@ -73,15 +73,15 @@
         width: 25px;
         height: auto;
         transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1));
-        transition: transform 0.3s;
     }
     .icon:hover {
         transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1)) scale(1.2);
     }
     .single-icon {
-        top: calc(50% + 30px); /* Center + 30px below */
+        position: absolute;
+        top: 30px; /* 30px below the center */
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
     }
   </style>
   <link rel="stylesheet" href="content/css/icons.css">
@@ -160,6 +160,7 @@
           const totalIcons = icons.length;
           if (totalIcons === 1) {
             icons[0].classList.add('single-icon');
+            icons[0].style.setProperty('--rotation', `0deg`);
           } else {
             const angleIncrement = 360 / totalIcons;
             icons.forEach((icon, index) => {
@@ -223,6 +224,7 @@
         const totalIcons = icons.length;
         if (totalIcons === 1) {
           icons[0].classList.add('single-icon');
+          icons[0].style.setProperty('--rotation', `0deg`);
         } else {
           const angleIncrement = 360 / totalIcons;
           icons.forEach((icon, index) => {
