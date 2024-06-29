@@ -6,79 +6,92 @@
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="content/js/functions.js"></script>
       <style>
-         body {
-         margin: 0;
-         padding: 0;
-         box-sizing: border-box;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         height: 100vh;
-         background-color: #f0f0f0;
-         flex-direction: column;
+
+body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            flex-direction: column;
          }
          .container {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
-         height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
          }
          .center-content {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
-         position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
          }
          .deepglow-button-wrapper {
-         position: relative;
-         z-index: 1;
-         width: 100px; /* Adjust based on the actual button size */
-         height: 100px; /* Adjust based on the actual button size */
-         display: flex;
-         justify-content: center;
-         align-items: center;
+            position: relative;
+            z-index: 1;
+            width: 100px; /* Adjust based on the actual button size */
+            height: 100px; /* Adjust based on the actual button size */
+            display: flex;
+            justify-content: center;
+            align-items: center;
          }
          .social-links {
-         position: absolute;
-         width: 300px;
-         height: 300px;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-         display: flex;
-         justify-content: center;
-         align-items: center;
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
          }
          .social-links .list-item {
-         position: absolute;
-         width: 40px;
-         height: 40px;
+            position: absolute;
+            width: 40px;
+            height: 40px;
          }
          .social-links .list-item a {
-         text-decoration: none;
-         color: #0066cc;
+            text-decoration: none;
+            color: #0066cc;
          }
          .social-links img {
-         width: 100%;
-         height: 100%;
+            width: 100%;
+            height: 100%;
          }
          .extra-icon {
-         position: absolute;
-         top: 0;
-         right: 0;
-         margin-top: -200px;
-         margin-right: -360px;
-         width: 80px;
-         height: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: -200px;
+            margin-right: -360px;
+            width: 80px;
+            height: auto;
          }
          .extra-icon img {
-         width: 100%;
-         height: 100%;
+            width: 100%;
+            height: 100%;
+         }
+         .extra-icon-below {
+            position: absolute;
+            top: calc(50% + 300px);
+            left: calc(50% - 10px);
+            transform: translateX(-50%);
+            width: 80px;
+            height: auto;
+         }
+         .extra-icon-below img {
+            width: 100%;
+            height: 100%;
          }
          .banner {
-         margin-bottom: 20px;
+            margin-bottom: 20px;
          }
          .list-item:nth-child(1) { transform: rotate(0deg) translate(150px) rotate(0deg); }
          .list-item:nth-child(2) { transform: rotate(60deg) translate(150px) rotate(-60deg); }
@@ -118,6 +131,9 @@
             </div>
             <div class="extra-icon">
                <a href="https://www.ult-co.net" class="icon website"><img src="" class="icon website" alt="Extra Icon"></a>
+            </div>
+            <div class="extra-icon-below">
+               <a href="https://www.example.com" class="icon website"><img src="" class="icon website" alt="Extra Icon Below"></a>
             </div>
          </div>
       </div>
