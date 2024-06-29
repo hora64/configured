@@ -15,6 +15,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
     .center-content {
         text-align: center;
@@ -26,7 +27,7 @@
         justify-content: center;
         flex-wrap: wrap;
         width: 100%;
-        margin-bottom: 10px; /* Reduced margin-bottom */
+        margin-bottom: 10px;
     }
     .list-item {
         display: flex;
@@ -49,7 +50,7 @@
         justify-content: center;
         flex-wrap: wrap;
         margin-top: 10px;
-        position: relative; /* Needed for absolute positioning of single icons */
+        position: relative;
     }
     .list-item a {
         text-decoration: none;
@@ -58,7 +59,7 @@
     }
     .section-label {
        text-align: center;
-       margin-top: 10px; /* Reduced margin-top */
+       margin-top: 10px;
        margin-bottom: 10px;
        font-size: 1.2em;
        font-weight: bold;
@@ -79,13 +80,13 @@
     }
     .single-icon {
         position: absolute;
-        top: 30px; /* 30px below the center */
+        top: 30px;
         left: 50%;
         transform: translateX(-50%) !important;
     }
   </style>
   <link rel="stylesheet" href="content/css/icons.css">
-  <title></title>
+  <title>Website</title>
 </head>
 <body>
   <div class="container">
@@ -224,9 +225,5 @@
       positionElements(document.querySelectorAll('.social-group'), 175); // Adjust minimum distance as needed
     });
   </script>
-  
-  
-  
-
 </body>
 </html>
