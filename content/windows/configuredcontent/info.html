@@ -45,9 +45,6 @@
       }
       .social-links .list-item {
           position: absolute;
-          display: flex;
-          align-items: center;
-          justify-content: center;
           width: 40px;
           height: 40px;
       }
@@ -62,12 +59,12 @@
       .banner {
           margin-bottom: 20px;
       }
-      .list-item:nth-child(1) { transform: translate(-50%, -100%); }
-      .list-item:nth-child(2) { transform: translate(50%, -100%); }
-      .list-item:nth-child(3) { transform: translate(-100%, 0); }
-      .list-item:nth-child(4) { transform: translate(100%, 0); }
-      .list-item:nth-child(5) { transform: translate(-50%, 100%); }
-      .list-item:nth-child(6) { transform: translate(50%, 100%); }
+      .list-item:nth-child(1) { transform: rotate(0deg) translate(150px) rotate(0deg); }
+      .list-item:nth-child(2) { transform: rotate(60deg) translate(150px) rotate(-60deg); }
+      .list-item:nth-child(3) { transform: rotate(120deg) translate(150px) rotate(-120deg); }
+      .list-item:nth-child(4) { transform: rotate(180deg) translate(150px) rotate(-180deg); }
+      .list-item:nth-child(5) { transform: rotate(240deg) translate(150px) rotate(-240deg); }
+      .list-item:nth-child(6) { transform: rotate(300deg) translate(150px) rotate(-300deg); }
   </style>
 </head>
 <body>
