@@ -7,58 +7,64 @@
    <script src="content/js/functions.js"></script>
    <style>
       body {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          height: 100vh;
-          overflow: hidden;
-          position: relative;
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         height: 100vh;
+         overflow: hidden;
+         position: relative;
       }
       .container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-          position: relative;
-          height: 100vh;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+         position: relative;
+         height: 100vh;
       }
       .center-content {
-          text-align: center;
-          margin-top: 2vh;
+         text-align: center;
+         margin-top: 2vh;
       }
       .social-group {
-          position: absolute;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          width: 150px; /* Adjust as needed */
+         position: absolute;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         width: 150px; /* Adjust as needed */
       }
       .social-links {
-          position: relative;
-          width: 150px;
-          height: 150px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+         position: relative;
+         width: 150px;
+         height: 150px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
       }
       .social-links .icon {
-          --rotation: 0deg;
-          --translation: 30px;
-          position: absolute;
-          width: 25px;
-          height: auto;
-          transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1));
+         --rotation: 0deg;
+         --translation: 50px;
+         position: absolute;
+         width: 25px;
+         height: auto;
+         transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1));
       }
-  </style>
+      strong {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+   </style>
 </head>
 <body>
    <div class="container">
       <div class="center-content">
          <img id="banner" src="content/assets/images/prerenderedText/configured.gif" alt="Banner">
          <a href="#" class="image-button" onclick="loadTabContent('#content', 'content/windows/main.html')">
-         <img id="deepglow-button" src="content/assets/images/configuredDeepGlow.png" alt="Deep Glow" onmouseover="setupImagePreview(this, 1.1)" onmouseout="setupImagePreview(this, 1)">
+            <img id="deepglow-button" src="content/assets/images/configuredDeepGlow.png" alt="Deep Glow" onmouseover="setupImagePreview(this, 1.1)" onmouseout="setupImagePreview(this, 1)">
          </a>
       </div>
       <div class="social-group">
@@ -157,62 +163,5 @@
          </div>
       </div>
    </div>
-   <script>
-      document.querySelectorAll('.social-links').forEach(socialLinks => {
-         const icons = socialLinks.querySelectorAll('.icon img');
-         const totalIcons = icons.length;
-         const angleIncrement = 360 / totalIcons;
-
-         icons.forEach((icon, index) => {
-            const angle = index * angleIncrement;
-            icon.parentElement.style.setProperty('--rotation', `${angle}deg`);
-         });
-      });
-
-      function isOverlapping(elem1, elem2, minDistance) {
-         const rect1 = elem1.getBoundingClientRect();
-         const rect2 = elem2.getBoundingClientRect();
-         
-         const dx = rect1.left - rect2.left;
-         const dy = rect1.top - rect2.top;
-         const distance = Math.sqrt(dx * dx + dy * dy);
-
-         return distance < minDistance;
-      }
-
-      function positionElements(elements, minDistance) {
-         elements.forEach((group, index) => {
-            let attempts = 0;
-            let overlap;
-            do {
-               const containerHeight = window.innerHeight;
-               const containerWidth = window.innerWidth;
-               const maxTop = containerHeight * 0.7 - group.offsetHeight;
-               const maxLeft = containerWidth * 0.7 - group.offsetWidth;
-               const minTop = containerHeight * 0.15;
-               const minLeft = containerWidth * 0.15;
-
-               const randomTop = Math.random() * maxTop + minTop;
-               const randomLeft = Math.random() * maxLeft + minLeft;
-
-               group.style.top = `${randomTop}px`;
-               group.style.left = `${randomLeft}px`;
-
-               overlap = false;
-               for (let i = 0; i < index; i++) {
-                  if (isOverlapping(group, elements[i], minDistance)) {
-                     overlap = true;
-                     break;
-                  }
-               }
-
-               attempts++;
-            } while (overlap && attempts < 100);
-         });
-      }
-
-      const socialGroups = document.querySelectorAll('.social-group');
-      positionElements(socialGroups, 150); // 150px is the minimum distance
-   </script>
 </body>
 </html>
