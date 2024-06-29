@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="content/js/functions.js"></script>
+   <style>
+      body {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 100vh;
+      }
+      .center-content {
+          text-align: center;
+          margin-top: 2vh;
+      }
+      .scrollable-list {
+          max-height: 100vh;
+          overflow-y: auto;
+          border: 1px solid #ccc;
+          padding: 2vh;
+          margin: 2vh;
+          width: 80vw;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.5em;
+      }
+      .list-row {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      .list-item {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          padding: 0.5em 0;
+      }
+      .list-item a {
+          text-decoration: none;
+          color: #0066cc;
+          margin: 0 0.5em;
+      }
+      .social-links {
+          display: flex;
+          gap: 0.5em;
+      }
+  </style>
+</head>
+<body>
+   <div class="container">
+      <div class="center-content">
+         <img id="banner" src="content/assets/images/prerenderedText/configured.gif" alt="Banner">
+         <a href="#" class="image-button" onclick="loadTabContent('#content', 'content/windows/main.html')">
+         <img id="deepglow-button" src="content/assets/images/configuredDeepGlow.png" alt="Deep Glow" onmouseover="setupImagePreview(this, 1.1)" onmouseout="setupImagePreview(this, 1)">
+         </a>
+      </div>
+      <div class="scrollable-list">
+         <div class="list-row">
+            <div class="list-item">
+               <a href="https://www.instagram.com/configurxd" class="icon instagram"><img src="" class="icon instagram"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <div class="list-item">
+               <a href="https://www.youtube.com/@configuredd" class="icon youtube"><img src="" class="icon youtube"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <div class="list-item">
+               <a href="https://discord.gg/configured" class="icon discord"><img src="" class="icon discord"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <div class="list-item">
+               <a href="https://x.com/configuredmedia" class="icon twitter"><img src="" class="icon twitter"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <div class="list-item">
+               <a href="https://www.tiktok.com/@configured.media" class="icon tiktok"><img src="" class="icon tiktok"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <div class="list-item">
+               <a href="https://soundcloud.com/configuredctn" class="icon soundcloud"><img src="" class="icon soundcloud"></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

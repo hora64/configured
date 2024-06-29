@@ -1,0 +1,103 @@
+.icon img {
+    width: 64px; /* 64px / 1920px = 3.33vw */
+    height: 64px; /* 64px / 1080px = 5.93vh */
+}
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1vh; /* 10px / 1080px = 0.93vh */
+}
+
+.icon:hover img {
+    transform: scale(1.1);
+}
+.prerenderedText:hover img {
+    transform: scale(1.1);
+}
+.icon.twitter img {
+    content: url('../assets/images/icons/twitter.gif');
+}
+.icon.twitter:hover img {
+    content: url('../assets/images/icons/twitterHover.gif');
+}
+.icon.tiktok img {
+    content: url('../assets/images/icons/tiktok.gif');
+}
+.icon.tiktok:hover img {
+    content: url('../assets/images/icons/tiktokHover.gif');
+}
+.icon.youtube img {
+    content: url('../assets/images/icons/youtube.gif');
+}
+.icon.youtube:hover img {
+    content: url('../assets/images/icons/youtubeHover.gif');
+}
+.icon.instagram img {
+    content: url('../assets/images/icons/instagram.gif');
+}
+.icon.instagram:hover img {
+    content: url('../assets/images/icons/instagramHover.gif');
+}
+.icon.soundcloud img {
+    content: url('../assets/images/icons/soundcloud.gif');
+}
+.icon.soundcloud:hover img {
+    content: url('../assets/images/icons/soundcloudHover.gif');
+}
+.icon.discord img {
+    content: url('../assets/images/icons/discord.gif');
+}
+.icon.discord:hover img {
+    content: url('../assets/images/icons/discordHover.gif');
+}
+.icon.website img {
+    content: url('../assets/images/icons/website.gif');
+}
+.icon.website:hover img {
+    content: url('../assets/images/icons/websiteHover.gif');
+}
+.prerenderedText.assets img {
+    content: url('../assets/images/prerenderedText/assets.gif');
+}
+.prerenderedText.assets:hover img {
+    content: url('../assets/images/prerenderedText/assetsHover.gif');
+}
+.prerenderedText.ctnMedia img {
+    content: url('../assets/images/prerenderedText/ctnMedia.gif');
+}
+.prerenderedText.ctnMedia:hover img {
+    content: url('../assets/images/prerenderedText/ctnMediaHover.gif');
+}
+.prerenderedText.ctnMusic img {
+    content: url('../assets/images/prerenderedText/ctnMusic.gif');
+}
+.prerenderedText.ctnMusic:hover img {
+    content: url('../assets/images/prerenderedText/ctnMusicHover.gif');
+}
+.prerenderedText.games img {
+    content: url('../assets/images/prerenderedText/games.gif');
+}
+.prerenderedText.games:hover img {
+    content: url('../assets/images/prerenderedText/gamesHover.gif');
+}
+.prerenderedText.management img {
+    content: url('../assets/images/prerenderedText/management.gif');
+}
+.prerenderedText.management:hover img {
+    content: url('../assets/images/prerenderedText/managementHover.gif');
+}
+.prerenderedText.info img {
+    content: url('../assets/images/prerenderedText/info.gif');
+}
+.prerenderedText.info:hover img {
+    content: url('../assets/images/prerenderedText/infoHover.gif');
+}
+.prerenderedText.toolandguides img {
+    content: url('../assets/images/prerenderedText/toolsandguides.gif');
+}
+.prerenderedText.toolandguides:hover img {
+    content: url('../assets/images/prerenderedText/toolsandguidesHover.gif');
+}
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="content/js/functions.js"></script>
+   <style>
+      .container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      .center-content {
+         text-align: center;
+         margin-top: 20px;
+      }
+
+      .scrollable-list {
+         max-height: 400px;
+         overflow-y: auto;
+         border: 1px solid #ccc;
+         padding: 10px;
+         margin: 20px;
+         width: 80%;
+      }
+
+      .list-row {
+         display: flex;
+         justify-content: space-around;
+         width: 100%;
+         margin-top: 10px; /* Adjust the gap between rows if needed */
+      }
+
+      .list-item {
+         flex: 1;
+         text-align: center;
+         padding: 0 0.5em; /* Use em units for padding */
+      }
+
+      .file-icons img {
+         width: 30px;
+         height: 30px;
+         transition: transform 0.3s ease;
+      }
+
+      audio {
+         display: none;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <div class="center-content">
+         <img id="banner" src="content/assets/images/prerenderedText/configured.gif" alt="Banner">
+         <a href="#" class="image-button" onclick="loadTabContent('#content', 'content/windows/main.html')">
+         <img id="deepglow-button" src="content/assets/images/configuredDeepGlow.png" alt="Deep Glow" onmouseover="setupImagePreview(this, 1.1)" onmouseout="setupImagePreview(this, 1)">
+         </a>
+      </div>
+      <div class="scrollable-list">
+         <div class="list-row">
+            <div class="list-item">
+               <div class="file-icons image-preview">
+                  <a href="content/files/animated.gif" download>
+                     <img src="content/assets/images/gif-icon.png" data-hover-src="content/assets/images/gif-icon-hover.png" data-original-src="content/assets/images/gif-icon.png" alt="GIF"
+                        onmouseover="setupImagePreview(this, 1.1)" onmouseout="setupImagePreview(this, 1)">
+                  </a>
+               </div>
+            </div>
+            <div class="list-item">
+               <div class="file-icons audio-preview">
+                  <a href="content/files/audio.mp3" download>
+                     <img src="content/assets/images/mp3-icon.png" data-hover-src="content/assets/images/mp3-icon-hover.png" data-original-src="content/assets/images/mp3-icon.png" alt="MP3"
+                        onmouseover="setupAudioPreview(this, 'content/files/audio.mp3', 1.1)" onmouseout="setupAudioPreview(this, 'content/files/audio.mp3', 1)">
+                  </a>
+               </div>
+            </div>
+            <!-- Add more list items as needed -->
+         </div>
+         <!-- Add more rows as needed -->
+      </div>
+   </div>
+</body>
+</html>
