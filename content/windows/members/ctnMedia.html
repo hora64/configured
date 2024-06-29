@@ -10,8 +10,8 @@
        margin: 0;
        padding: 0;
        box-sizing: border-box;
-       height: 100vh;
-       overflow: hidden;
+       height: 200vh;
+       overflow: visible;;
        position: relative;
     }
     .container {
@@ -19,15 +19,16 @@
        flex-direction: column;
        align-items: center;
        width: 100%;
+       height: 100%;
+       overflow-y: auto; /* Enable vertical scrolling */
        position: relative;
-       height: 100vh;
     }
     .center-content {
        text-align: center;
        margin-top: 2vh;
     }
     .social-group {
-       position: absolute;
+       position: relative;
        display: flex;
        flex-direction: column;
        align-items: center;
