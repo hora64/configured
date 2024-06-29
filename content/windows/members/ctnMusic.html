@@ -169,19 +169,36 @@
          });
       });
 
-      document.querySelectorAll('.social-group').forEach(group => {
-         const containerHeight = window.innerHeight;
-         const containerWidth = window.innerWidth;
-         const maxTop = containerHeight * 0.7 - group.offsetHeight; // 60% from top and bottom, so 70% for the range
-         const maxLeft = containerWidth * 0.7 - group.offsetWidth; // 60% from left and right, so 70% for the range
-         const minTop = containerHeight * 0.15; // 15% padding from top
-         const minLeft = containerWidth * 0.15; // 15% padding from left
+      const socialGroups = document.querySelectorAll('.social-group');
+      const minDistance = 50;
 
-         const randomTop = Math.random() * maxTop + minTop;
-         const randomLeft = Math.random() * maxLeft + minLeft;
+      function isOverlapping(newGroup, groups) {
+         for (let group of groups) {
+            const rect1 = newGroup.getBoundingClientRect();
+            const rect2 = group.getBoundingClientRect();
+            const dx = rect1.left - rect2.left;
+            const dy = rect1.top - rect2.top;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            if (distance < minDistance) return true;
+         }
+         return false;
+      }
 
-         group.style.top = `${randomTop}px`;
-         group.style.left = `${randomLeft}px`;
+      socialGroups.forEach((group, index) => {
+         let randomTop, randomLeft;
+         do {
+            const containerHeight = window.innerHeight;
+            const containerWidth = window.innerWidth;
+            const maxTop = containerHeight * 0.7 - group.offsetHeight; // 60% from top and bottom, so 70% for the range
+            const maxLeft = containerWidth * 0.7 - group.offsetWidth; // 60% from left and right, so 70% for the range
+            const minTop = containerHeight * 0.15; // 15% padding from top
+            const minLeft = containerWidth * 0.15; // 15% padding from left
+
+            randomTop = Math.random() * maxTop + minTop;
+            randomLeft = Math.random() * maxLeft + minLeft;
+            group.style.top = `${randomTop}px`;
+            group.style.left = `${randomLeft}px`;
+         } while (isOverlapping(group, Array.from(socialGroups).slice(0, index)));
       });
    </script>
 </body>
