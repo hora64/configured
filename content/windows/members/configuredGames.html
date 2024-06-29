@@ -7,49 +7,73 @@
    <script src="content/js/functions.js"></script>
    <style>
       body {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         height: 100vh;
+         overflow: hidden;
+         position: relative;
       }
       .container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          height: 60vh; /* 60% of the viewport height */
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+         position: relative;
+         height: 100vh;
       }
       .center-content {
-          text-align: center;
-          margin-top: 2vh;
+         text-align: center;
+         margin-top: 2vh;
       }
-      .scrollable-list {
-          max-height: 40vh; /* Adjust to fit within 40vh container */
-          overflow-y: auto;
-          border: 1px solid #ccc;
-          padding: 2vh;
-          margin: 2vh;
-          width: 80vw;
-          display: grid;
-          grid-template-columns: repeat(3, 1fr); /* 3 columns for better spacing */
-          gap: 0.5em; /* Adjust the gap between items */
+      .social-group {
+         position: absolute;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         width: 150px; /* Adjust as needed */
       }
-      .list-row {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+      .social-links {
+         position: relative;
+         width: 150px;
+         height: 150px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
       }
-      .list-item {
-          display: flex;
-          justify-content: center;
-          width: 100%;
-          padding: 0.5em 0; /* Use padding to reduce spacing */
+      .social-links .icon {
+         --rotation: 0deg;
+         --translation: 35px;
+         position: absolute;
+         width: 25px;
+         height: auto;
+         transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1));
       }
-      .list-item a {
-          text-decoration: none;
-          margin: 0 8px; /* Add margin to space out the links */
+      .social-links .icon:hover {
+         transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1)) scale(1.1);
       }
-  </style>
-  <title>Your Website Title</title>
-  <meta name="description" content="A brief description of your webpage for better SEO">
+      .social-links .single-icon {
+         position: static;
+         margin-top: 30px; /* 30px below the center */
+         transform: none !important;
+      }
+      .social-links .single-icon img {
+         transform: none !important;
+      }
+      .social-links .single-icon:hover {
+         transform: scale(1.1) !important;
+      }
+      strong {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+   </style>
+   <title>Your Website Title</title>
+   <meta name="description" content="A brief description of your webpage for better SEO">
 </head>
 <body>
    <div class="container">
@@ -59,117 +83,116 @@
          <img id="deepglow-button" src="content/assets/images/configuredDeepGlow.png" alt="Deep Glow" onmouseover="setupImagePreview(this, 1.1)" onmouseout="setupImagePreview(this, 1)">
          </a>
       </div>
-      <div class="scrollable-list">
-         <!-- Social Links List -->
-         <div class="list-row">
+
+      <!-- Social Links List -->
+      <div class="social-group" style="top: 100px; left: 200px;">
+         <div class="social-links">
             <strong>spiritual_pressure</strong>
-            <div class="list-item">
-               <a href="https://www.instagram.com/spiritual_pressure/" class="icon instagram"><img src="" class="icon instagram"></a>
-               <a href="https://www.youtube.com/@dreamakers" class="icon youtube"><img src="" class="icon youtube"></a>
-            </div>
+            <a href="https://www.instagram.com/spiritual_pressure/" class="icon instagram"><img src="" class="icon instagram"></a>
+            <a href="https://www.youtube.com/@dreamakers" class="icon youtube"><img src="" class="icon youtube"></a>
          </div>
-         <div class="list-row">
+      </div>
+      <div class="social-group" style="top: 200px; left: 300px;">
+         <div class="social-links">
             <strong>blinky</strong>
-            <div class="list-item">
-               <a href="https://www.youtube.com/@RealBlinkyy" class="icon youtube"><img src="" class="icon youtube"></a>
-               <a href="https://www.instagram.com/realblnky/" class="icon instagram"><img src="" class="icon instagram"></a>
-            </div>
+            <a href="https://www.youtube.com/@RealBlinkyy" class="icon youtube"><img src="" class="icon youtube"></a>
+            <a href="https://www.instagram.com/realblnky/" class="icon instagram"><img src="" class="icon instagram"></a>
          </div>
-         <div class="list-row">
+      </div>
+      <div class="social-group" style="top: 300px; left: 400px;">
+         <div class="social-links">
             <strong>cloud</strong>
-            <div class="list-item">
-               <a href="https://www.youtube.com/@yusercloud" class="icon youtube"><img src="" class="icon youtube"></a>
-            </div>
+            <a href="https://www.youtube.com/@yusercloud" class="icon youtube"><img src="" class="icon youtube"></a>
          </div>
-         <div class="list-row">
+      </div>
+      <div class="social-group" style="top: 400px; left: 500px;">
+         <div class="social-links">
             <strong>xvvo</strong>
-            <div class="list-item">
-               <a href="https://www.twitter.com/1xvvo" class="icon twitter"><img src="" class="icon twitter"></a>
-               <a href="https://www.youtube.com/@xvvo" class="icon youtube"><img src="" class="icon youtube"></a>
-               <a href="https://www.instagram.com/xvvo252" class="icon instagram"><img src="" class="icon instagram"></a>
-            </div>
+            <a href="https://www.twitter.com/1xvvo" class="icon twitter"><img src="" class="icon twitter"></a>
+            <a href="https://www.youtube.com/@xvvo" class="icon youtube"><img src="" class="icon youtube"></a>
+            <a href="https://www.instagram.com/xvvo252" class="icon instagram"><img src="" class="icon instagram"></a>
          </div>
-         <div class="list-row">
+      </div>
+      <div class="social-group" style="top: 500px; left: 600px;">
+         <div class="social-links">
             <strong>conbxn</strong>
-            <div class="list-item">
-               <a href="https://www.youtube.com/@conbxn" class="icon youtube"><img src="" class="icon youtube"></a>
-               <a href="https://www.instagram.com/conbxn/" class="icon instagram"><img src="" class="icon instagram"></a>
-            </div>
+            <a href="https://www.youtube.com/@conbxn" class="icon youtube"><img src="" class="icon youtube"></a>
+            <a href="https://www.instagram.com/conbxn/" class="icon instagram"><img src="" class="icon instagram"></a>
          </div>
-         <div class="list-row">
+      </div>
+      <div class="social-group" style="top: 600px; left: 700px;">
+         <div class="social-links">
             <strong>diogo</strong>
-            <div class="list-item">
-               <a href="https://www.youtube.com/@urldiogo" class="icon youtube"><img src="" class="icon youtube"></a>
-               <a href="https://www.instagram.com/urldiogo/" class="icon instagram"><img src="" class="icon instagram"></a>
-            </div>
+            <a href="https://www.youtube.com/@urldiogo" class="icon youtube"><img src="" class="icon youtube"></a>
+            <a href="https://www.instagram.com/urldiogo/" class="icon instagram"><img src="" class="icon instagram"></a>
          </div>
-         <div class="list-row">
+      </div>
+      <div class="social-group" style="top: 700px; left: 800px;">
+         <div class="social-links">
             <strong>iryfx</strong>
-            <div class="list-item">
-               <a href="https://www.youtube.com/@Iryfx." class="icon youtube"><img src="" class="icon youtube"></a>
-               <a href="https://www.instagram.com/iryfxx/" class="icon instagram"><img src="" class="icon instagram"></a>
-            </div>
+            <a href="https://www.youtube.com/@Iryfx." class="icon youtube"><img src="" class="icon youtube"></a>
+            <a href="https://www.instagram.com/iryfxx/" class="icon instagram"><img src="" class="icon instagram"></a>
          </div>
-         <div class="list-row">
+      </div>
+      <div class="social-group" style="top: 800px; left: 900px;">
+         <div class="social-links">
             <strong>lurk</strong>
-            <div class="list-item">
-               <a href="https://x.com/Lurkxo_" class="icon twitter"><img src="" class="icon twitter"></a>
-               <a href="https://www.youtube.com/@Ashtonv4" class="icon youtube"><img src="" class="icon youtube"></a>
-            </div>
+            <a href="https://x.com/Lurkxo_" class="icon twitter"><img src="" class="icon twitter"></a>
+            <a href="https://www.youtube.com/@Ashtonv4" class="icon youtube"><img src="" class="icon youtube"></a>
          </div>
-         <div class="list-row">
+      </div>
+      <div class="social-group" style="top: 900px; left: 1000px;">
+         <div class="social-links">
             <strong>moonaiana</strong>
-            <div class="list-item">
-               <a href="https://www.instagram.com/moonaiana/" class="icon instagram"><img src="" class="icon instagram"></a>
-               <a href="https://www.youtube.com/@moonaiana" class="icon youtube"><img src="" class="icon youtube"></a>
-            </div>
+            <a href="https://www.instagram.com/moonaiana/" class="icon instagram"><img src="" class="icon instagram"></a>
+            <a href="https://www.youtube.com/@moonaiana" class="icon youtube"><img src="" class="icon youtube"></a>
          </div>
-         <div class="list-row">
+      </div>
+      <div class="social-group" style="top: 1000px; left: 1100px;">
+         <div class="social-links">
             <strong>miniyata</strong>
-            <div class="list-item">
-               <a href="https://www.youtube.com/@miniyata" class="icon youtube"><img src="" class="icon youtube"></a>
-               <a href="https://www.instagram.com/minieyata/" class="icon instagram"><img src="" class="icon instagram"></a>
-            </div>
+            <a href="https://www.youtube.com/@miniyata" class="icon youtube"><img src="" class="icon youtube"></a>
+            <a href="https://www.instagram.com/minieyata/" class="icon instagram"><img src="" class="icon instagram"></a>
          </div>
-         <div class="list-row">
+      </div>
+      <div class="social-group" style="top: 1100px; left: 1200px;">
+         <div class="social-links">
             <strong>moji</strong>
-            <div class="list-item">
-               <a href="https://www.instagram.com/urlmoji/" class="icon instagram"><img src="" class="icon instagram"></a>
-               <a href="https://www.youtube.com/@urlmoji" class="icon youtube"><img src="" class="icon youtube"></a>
-            </div>
+            <a href="https://www.instagram.com/urlmoji/" class="icon instagram"><img src="" class="icon instagram"></a>
+            <a href="https://www.youtube.com/@urlmoji" class="icon youtube"><img src="" class="icon youtube"></a>
          </div>
-         <div class="list-row">
+      </div>
+      <div class="social-group" style="top: 1200px; left: 1300px;">
+         <div class="social-links">
             <strong>motir</strong>
-            <div class="list-item">
-               <a href="https://www.youtube.com/@derfer12/featured" class="icon youtube"><img src="" class="icon youtube"></a>
-            </div>
+            <a href="https://www.youtube.com/@derfer12/featured" class="icon youtube"><img src="" class="icon youtube"></a>
          </div>
-         <div class="list-row">
+      </div>
+      <div class="social-group" style="top: 1300px; left: 1400px;">
+         <div class="social-links">
             <strong>propane</strong>
-            <div class="list-item">
-               <a href="https://www.youtube.com/@propane678" class="icon youtube"><img src="" class="icon youtube"></a>
-               <a href="https://www.instagram.com/pppne23/" class="icon instagram"><img src="" class="icon instagram"></a>
-            </div>
+            <a href="https://www.youtube.com/@propane678" class="icon youtube"><img src="" class="icon youtube"></a>
+            <a href="https://www.instagram.com/pppne23/" class="icon instagram"><img src="" class="icon instagram"></a>
          </div>
-         <div class="list-row">
+      </div>
+      <div class="social-group" style="top: 1400px; left: 1500px;">
+         <div class="social-links">
             <strong>sneak</strong>
-            <div class="list-item">
-               <a href="https://www.youtube.com/@s_flicker" class="icon youtube"><img src="" class="icon youtube"></a>
-               <a href="https://www.instagram.com/colli.err/" class="icon instagram"><img src="" class="icon instagram"></a>
-            </div>
+            <a href="https://www.youtube.com/@s_flicker" class="icon youtube"><img src="" class="icon youtube"></a>
+            <a href="https://www.instagram.com/colli.err/" class="icon instagram"><img src="" class="icon instagram"></a>
          </div>
-         <div class="list-row">
+      </div>
+      <div class="social-group" style="top: 1500px; left: 1600px;">
+         <div class="social-links">
             <strong>undo</strong>
-            <div class="list-item">
-               <a href="https://www.youtube.com/@odnu" class="icon youtube"><img src="" class="icon youtube"></a>
-               <a href="https://x.com/udno_" class="icon twitter"><img src="" class="icon twitter"></a>
-            </div>
+            <a href="https://www.youtube.com/@odnu" class="icon youtube"><img src="" class="icon youtube"></a>
+            <a href="https://x.com/udno_" class="icon twitter"><img src="" class="icon twitter"></a>
          </div>
-         <div class="list-row">
+      </div>
+      <div class="social-group" style="top: 1600px; left: 1700px;">
+         <div class="social-links">
             <strong>jspn</strong>
-            <div class="list-item">
-               <a href="https://www.youtube.com/@1jspn" class="icon youtube"><img src="" class="icon youtube"></a>
-            </div>
+            <a href="https://www.youtube.com/@1jspn" class="icon youtube"><img src="" class="icon youtube"></a>
          </div>
       </div>
    </div>
