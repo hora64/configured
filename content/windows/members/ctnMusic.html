@@ -50,6 +50,10 @@
          width: 25px;
          height: auto;
          transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1));
+         transition: transform 0.3s;
+      }
+      .social-links .icon:hover {
+         transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1)) scale(1.2);
       }
       strong {
          position: absolute;
