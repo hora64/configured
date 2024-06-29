@@ -1,4 +1,4 @@
-name: Deploy to Public
+name: Deploy to Configured Media
 
 on:
   workflow_dispatch:
@@ -11,24 +11,24 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Remove Old Public Folder Contents
+    - name: Remove Old Configured Media Folder Contents
       run: |
-        rm -rf public/*
+        rm -rf configured.media/*
 
-    - name: Copy Content to Public Folder
+    - name: Copy Content to Configured Media Folder
       run: |
-        cp -r content/* public/
+        cp -r content/* configured.media/
 
-    - name: Copy Index.html to Public Folder
+    - name: Copy Index.html to Configured Media Folder
       run: |
-        cp index.html public/
+        cp index.html configured.media/
 
     - name: Commit Changes
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add public/
-        git commit -m "Deploy content to public folder"
+        git add configured.media/
+        git commit -m "Deploy content to configured.media folder"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
