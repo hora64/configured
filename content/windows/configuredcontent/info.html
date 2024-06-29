@@ -1,125 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script src="content/js/functions.js"></script>
-   <style>
-      body {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          background-color: #f0f0f0;
-          flex-direction: column;
-      }
-      .container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
-      }
-      .center-content {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-      }
-      .deepglow-button-wrapper {
-          position: relative;
-          z-index: 1;
-          width: 100px; /* Adjust based on the actual button size */
-          height: 100px; /* Adjust based on the actual button size */
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
-      .social-links {
-          position: absolute;
-          width: 300px;
-          height: 300px;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
-      .social-links .list-item {
-          position: absolute;
-          width: 40px;
-          height: 40px;
-      }
-      .social-links .list-item a {
-          text-decoration: none;
-          color: #0066cc;
-      }
-      .social-links img {
-          width: 100%;
-          height: 100%;
-      }
-      .extra-icon {
-          position: absolute;
-          top: 0;
-          right: 0;
-          margin-top: -20px; /* Adjust based on your preference */
-          margin-right: -20px; /* Adjust based on your preference */
-          width: 40px;
-          height: 40px;
-      }
-      .extra-icon img {
-          width: 100%;
-          height: 100%;
-      }
-      .banner {
-          margin-bottom: 20px;
-      }
-      .list-item:nth-child(1) { transform: rotate(0deg) translate(150px) rotate(0deg); }
-      .list-item:nth-child(2) { transform: rotate(60deg) translate(150px) rotate(-60deg); }
-      .list-item:nth-child(3) { transform: rotate(120deg) translate(150px) rotate(-120deg); }
-      .list-item:nth-child(4) { transform: rotate(180deg) translate(150px) rotate(-180deg); }
-      .list-item:nth-child(5) { transform: rotate(240deg) translate(150px) rotate(-240deg); }
-      .list-item:nth-child(6) { transform: rotate(300deg) translate(150px) rotate(-300deg); }
-  </style>
-</head>
-<body>
-   <div class="container">
-      <div class="center-content">
-         <div class="deepglow-button-wrapper">
-            <a href="#" class="image-button" onclick="loadTabContent('#content', 'content/windows/main.html')">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="content/js/functions.js"></script>
+      <style>
+         body {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         background-color: #f0f0f0;
+         flex-direction: column;
+         }
+         .container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         height: 100%;
+         }
+         .center-content {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         position: relative;
+         }
+         .deepglow-button-wrapper {
+         position: relative;
+         z-index: 1;
+         width: 100px; /* Adjust based on the actual button size */
+         height: 100px; /* Adjust based on the actual button size */
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         }
+         .social-links {
+         position: absolute;
+         width: 300px;
+         height: 300px;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         }
+         .social-links .list-item {
+         position: absolute;
+         width: 40px;
+         height: 40px;
+         }
+         .social-links .list-item a {
+         text-decoration: none;
+         color: #0066cc;
+         }
+         .social-links img {
+         width: 100%;
+         height: 100%;
+         }
+         .extra-icon {
+         position: absolute;
+         top: 0;
+         right: 0;
+         margin-top: -200px;
+         margin-right: -360px;
+         width: 80px;
+         height: auto;
+         }
+         .extra-icon img {
+         width: 100%;
+         height: 100%;
+         }
+         .banner {
+         margin-bottom: 20px;
+         }
+         .list-item:nth-child(1) { transform: rotate(0deg) translate(150px) rotate(0deg); }
+         .list-item:nth-child(2) { transform: rotate(60deg) translate(150px) rotate(-60deg); }
+         .list-item:nth-child(3) { transform: rotate(120deg) translate(150px) rotate(-120deg); }
+         .list-item:nth-child(4) { transform: rotate(180deg) translate(150px) rotate(-180deg); }
+         .list-item:nth-child(5) { transform: rotate(240deg) translate(150px) rotate(-240deg); }
+         .list-item:nth-child(6) { transform: rotate(300deg) translate(150px) rotate(-300deg); }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="center-content">
+            <div class="deepglow-button-wrapper">
+               <a href="#" class="image-button" onclick="loadTabContent('#content', 'content/windows/main.html')">
                <img id="deepglow-button" src="content/assets/images/configuredDeepGlow.png" alt="Deep Glow" onmouseover="setupImagePreview(this, 1.1)" onmouseout="setupImagePreview(this, 1)">
-            </a>
-         </div>
-         <div class="social-links">
-            <div class="list-item">
-               <a href="https://www.instagram.com/configurxd" class="icon instagram"><img src="content/assets/images/instagram.png" class="icon instagram" alt="Instagram"></a>
+               </a>
             </div>
-            <div class="list-item">
-               <a href="https://www.youtube.com/@configuredd" class="icon youtube"><img src="content/assets/images/youtube.png" class="icon youtube" alt="YouTube"></a>
+            <div class="social-links">
+               <div class="list-item">
+                  <a href="https://www.instagram.com/configurxd" class="icon instagram"><img src="content/assets/images/instagram.png" class="icon instagram" alt="Instagram"></a>
+               </div>
+               <div class="list-item">
+                  <a href="https://www.youtube.com/@configuredd" class="icon youtube"><img src="content/assets/images/youtube.png" class="icon youtube" alt="YouTube"></a>
+               </div>
+               <div class="list-item">
+                  <a href="https://discord.gg/configured" class="icon discord"><img src="content/assets/images/discord.png" class="icon discord" alt="Discord"></a>
+               </div>
+               <div class="list-item">
+                  <a href="https://x.com/configuredmedia" class="icon twitter"><img src="content/assets/images/twitter.png" class="icon twitter" alt="Twitter"></a>
+               </div>
+               <div class="list-item">
+                  <a href="https://www.tiktok.com/@configured.media" class="icon tiktok"><img src="content/assets/images/tiktok.png" class="icon tiktok" alt="TikTok"></a>
+               </div>
+               <div class="list-item">
+                  <a href="https://soundcloud.com/configuredctn" class="icon soundcloud"><img src="content/assets/images/soundcloud.png" class="icon soundcloud" alt="SoundCloud"></a>
+               </div>
             </div>
-            <div class="list-item">
-               <a href="https://discord.gg/configured" class="icon discord"><img src="content/assets/images/discord.png" class="icon discord" alt="Discord"></a>
+            <div class="extra-icon">
+               <a href="https://www.example.com" class="icon website"><img src="content/assets/images/extra-icon.png" class="icon extra" alt="Extra Icon"></a>
             </div>
-            <div class="list-item">
-               <a href="https://x.com/configuredmedia" class="icon twitter"><img src="content/assets/images/twitter.png" class="icon twitter" alt="Twitter"></a>
-            </div>
-            <div class="list-item">
-               <a href="https://www.tiktok.com/@configured.media" class="icon tiktok"><img src="content/assets/images/tiktok.png" class="icon tiktok" alt="TikTok"></a>
-            </div>
-            <div class="list-item">
-               <a href="https://soundcloud.com/configuredctn" class="icon soundcloud"><img src="content/assets/images/soundcloud.png" class="icon soundcloud" alt="SoundCloud"></a>
-            </div>
-         </div>
-         <div class="extra-icon">
-            <a href="https://www.example.com" class="icon website"><img src="content/assets/images/extra-icon.png" class="icon extra" alt="Extra Icon"></a>
          </div>
       </div>
-   </div>
-</body>
+   </body>
 </html>
