@@ -15,6 +15,7 @@
           align-items: center;
           height: 100vh;
           background-color: #f0f0f0;
+          flex-direction: column;
       }
       .container {
           display: flex;
@@ -61,10 +62,16 @@
           width: 40px;
           height: 40px;
       }
+      .banner {
+          margin-bottom: 20px;
+      }
   </style>
 </head>
 <body>
    <div class="container">
+      <div class="banner">
+         <img id="banner" src="content/assets/images/prerenderedText/configured.gif" alt="Banner">
+      </div>
       <div class="center-content">
          <div class="deepglow-button-wrapper">
             <a href="#" class="image-button" onclick="loadTabContent('#content', 'content/windows/main.html')">
