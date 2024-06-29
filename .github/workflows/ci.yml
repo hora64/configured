@@ -3,11 +3,11 @@
 
 name: Deploy to neocities
 
-# only run on changes to main
 on:
   push:
     branches:
       - main
+  workflow_dispatch: # allows manual triggering
 
 concurrency: # prevent concurrent deploys doing strange things
   group: deploy-to-neocities
