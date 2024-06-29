@@ -10,8 +10,8 @@
        margin: 0;
        padding: 0;
        box-sizing: border-box;
-       height: 200vh;
-       overflow: visible;;
+       height: 100vh;
+       overflow: hidden;
        position: relative;
     }
     .container {
@@ -19,9 +19,16 @@
        flex-direction: column;
        align-items: center;
        width: 100%;
-       height: 100%;
-       overflow-y: auto; /* Enable vertical scrolling */
+       height: 200vh; /* Double the viewport height */
+       overflow-y: scroll; /* Enable vertical scrolling */
        position: relative;
+    }
+    .container::-webkit-scrollbar {
+       display: none; /* Hide the scrollbar on WebKit browsers */
+    }
+    .container {
+       -ms-overflow-style: none;  /* IE and Edge */
+       scrollbar-width: none;  /* Firefox */
     }
     .center-content {
        text-align: center;
