@@ -11,11 +11,17 @@
         "artist": "unpleasing",
         "title": "telling lies (beat)"
     },
-        {
+    {
         "url": "content/assets/audio/music/aquafina.mp3",
         "defaultName": "aquafina",
         "artist": "klyve",
         "title": "aquafina"
+    },
+    {
+        "url": "content/assets/audio/music/2dane.mp3",
+        "defaultName": "2dane",
+        "artist": "ivy02034",
+        "title": "2dane"
     }
 
 ]
