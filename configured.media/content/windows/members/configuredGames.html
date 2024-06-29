@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="content/js/functions.js"></script>
+   <style>
+      body {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 60vh; /* 60% of the viewport height */
+      }
+      .center-content {
+          text-align: center;
+          margin-top: 2vh;
+      }
+      .scrollable-list {
+          max-height: 40vh; /* Adjust to fit within 40vh container */
+          overflow-y: auto;
+          border: 1px solid #ccc;
+          padding: 2vh;
+          margin: 2vh;
+          width: 80vw;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr); /* 3 columns for better spacing */
+          gap: 0.5em; /* Adjust the gap between items */
+      }
+      .list-row {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      .list-item {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          padding: 0.5em 0; /* Use padding to reduce spacing */
+      }
+      .list-item a {
+          text-decoration: none;
+          margin: 0 8px; /* Add margin to space out the links */
+      }
+  </style>
+  <title>Your Website Title</title>
+  <meta name="description" content="A brief description of your webpage for better SEO">
+</head>
+<body>
+   <div class="container">
+      <div class="center-content">
+         <img id="banner" src="content/assets/images/prerenderedText/configured.gif" alt="Banner">
+         <a href="#" class="image-button" onclick="loadTabContent('#content', 'content/windows/main.html')">
+         <img id="deepglow-button" src="content/assets/images/configuredDeepGlow.png" alt="Deep Glow" onmouseover="setupImagePreview(this, 1.1)" onmouseout="setupImagePreview(this, 1)">
+         </a>
+      </div>
+      <div class="scrollable-list">
+         <!-- Social Links List -->
+         <div class="list-row">
+            <strong>spiritual_pressure</strong>
+            <div class="list-item">
+               <a href="https://www.instagram.com/spiritual_pressure/" class="icon instagram"><img src="" class="icon instagram"></a>
+               <a href="https://www.youtube.com/@dreamakers" class="icon youtube"><img src="" class="icon youtube"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <strong>blinky</strong>
+            <div class="list-item">
+               <a href="https://www.youtube.com/@RealBlinkyy" class="icon youtube"><img src="" class="icon youtube"></a>
+               <a href="https://www.instagram.com/realblnky/" class="icon instagram"><img src="" class="icon instagram"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <strong>cloud</strong>
+            <div class="list-item">
+               <a href="https://www.youtube.com/@yusercloud" class="icon youtube"><img src="" class="icon youtube"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <strong>xvvo</strong>
+            <div class="list-item">
+               <a href="https://www.twitter.com/1xvvo" class="icon twitter"><img src="" class="icon twitter"></a>
+               <a href="https://www.youtube.com/@xvvo" class="icon youtube"><img src="" class="icon youtube"></a>
+               <a href="https://www.instagram.com/xvvo252" class="icon instagram"><img src="" class="icon instagram"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <strong>conbxn</strong>
+            <div class="list-item">
+               <a href="https://www.youtube.com/@conbxn" class="icon youtube"><img src="" class="icon youtube"></a>
+               <a href="https://www.instagram.com/conbxn/" class="icon instagram"><img src="" class="icon instagram"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <strong>diogo</strong>
+            <div class="list-item">
+               <a href="https://www.youtube.com/@urldiogo" class="icon youtube"><img src="" class="icon youtube"></a>
+               <a href="https://www.instagram.com/urldiogo/" class="icon instagram"><img src="" class="icon instagram"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <strong>iryfx</strong>
+            <div class="list-item">
+               <a href="https://www.youtube.com/@Iryfx." class="icon youtube"><img src="" class="icon youtube"></a>
+               <a href="https://www.instagram.com/iryfxx/" class="icon instagram"><img src="" class="icon instagram"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <strong>lurk</strong>
+            <div class="list-item">
+               <a href="https://x.com/Lurkxo_" class="icon twitter"><img src="" class="icon twitter"></a>
+               <a href="https://www.youtube.com/@Ashtonv4" class="icon youtube"><img src="" class="icon youtube"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <strong>moonaiana</strong>
+            <div class="list-item">
+               <a href="https://www.instagram.com/moonaiana/" class="icon instagram"><img src="" class="icon instagram"></a>
+               <a href="https://www.youtube.com/@moonaiana" class="icon youtube"><img src="" class="icon youtube"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <strong>miniyata</strong>
+            <div class="list-item">
+               <a href="https://www.youtube.com/@miniyata" class="icon youtube"><img src="" class="icon youtube"></a>
+               <a href="https://www.instagram.com/minieyata/" class="icon instagram"><img src="" class="icon instagram"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <strong>moji</strong>
+            <div class="list-item">
+               <a href="https://www.instagram.com/urlmoji/" class="icon instagram"><img src="" class="icon instagram"></a>
+               <a href="https://www.youtube.com/@urlmoji" class="icon youtube"><img src="" class="icon youtube"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <strong>motir</strong>
+            <div class="list-item">
+               <a href="https://www.youtube.com/@derfer12/featured" class="icon youtube"><img src="" class="icon youtube"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <strong>propane</strong>
+            <div class="list-item">
+               <a href="https://www.youtube.com/@propane678" class="icon youtube"><img src="" class="icon youtube"></a>
+               <a href="https://www.instagram.com/pppne23/" class="icon instagram"><img src="" class="icon instagram"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <strong>sneak</strong>
+            <div class="list-item">
+               <a href="https://www.youtube.com/@s_flicker" class="icon youtube"><img src="" class="icon youtube"></a>
+               <a href="https://www.instagram.com/colli.err/" class="icon instagram"><img src="" class="icon instagram"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <strong>undo</strong>
+            <div class="list-item">
+               <a href="https://www.youtube.com/@odnu" class="icon youtube"><img src="" class="icon youtube"></a>
+               <a href="https://x.com/udno_" class="icon twitter"><img src="" class="icon twitter"></a>
+            </div>
+         </div>
+         <div class="list-row">
+            <strong>jspn</strong>
+            <div class="list-item">
+               <a href="https://www.youtube.com/@1jspn" class="icon youtube"><img src="" class="icon youtube"></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
