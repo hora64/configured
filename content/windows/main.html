@@ -6,66 +6,84 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="content/js/functions.js"></script>
   <style>
-      body {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-      }
-      .container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-      }
-      .center-content {
-          text-align: center;
-          margin-top: 20px;
-      }
-      .list-row {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          flex-wrap: wrap;
-          width: 100%;
-          margin-bottom: 10px; /* Reduced margin-bottom */
-      }
-      .list-item {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          padding: 10px;
-          border-radius: 8px;
-          margin: 10px;
-          width: 128px;
-          height: auto;
-      }
-      .list-item img {
-          max-width: 100%;
-          height: auto;
-      }
-      .social-links {
-          display: flex;
-          gap: 10px;
-          justify-content: center;
-          flex-wrap: wrap;
-          margin-top: 10px;
-      }
-      .list-item a {
-          text-decoration: none;
-          color: #0066cc;
-          margin: 0 10px;
-      }
-      .section-label {
-         text-align: center;
-         margin-top: 10px; /* Reduced margin-top */
-         margin-bottom: 10px;
-         font-size: 1.2em;
-         font-weight: bold;
-      }
-      .gap {
-         margin-top: 20px;
-      }
-  </style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .center-content {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .list-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 10px; /* Reduced margin-bottom */
+    }
+    .list-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        border-radius: 8px;
+        margin: 10px;
+        width: 128px;
+        height: auto;
+    }
+    .list-item img {
+        max-width: 100%;
+        height: auto;
+    }
+    .social-links {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        position: relative; /* Needed for absolute positioning of single icons */
+    }
+    .list-item a {
+        text-decoration: none;
+        color: #0066cc;
+        margin: 0 10px;
+    }
+    .section-label {
+       text-align: center;
+       margin-top: 10px; /* Reduced margin-top */
+       margin-bottom: 10px;
+       font-size: 1.2em;
+       font-weight: bold;
+    }
+    .gap {
+       margin-top: 20px;
+    }
+    .icon {
+        --rotation: 0deg;
+        --translation: 50px;
+        position: absolute;
+        width: 25px;
+        height: auto;
+        transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1));
+        transition: transform 0.3s;
+    }
+    .icon:hover {
+        transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1)) scale(1.2);
+    }
+    .single-icon {
+        top: calc(50% + 30px); /* Center + 30px below */
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
   <link rel="stylesheet" href="content/css/icons.css">
   <title></title>
 </head>
@@ -140,12 +158,15 @@
           document.querySelectorAll('.social-links').forEach(socialLinks => {
              const icons = socialLinks.querySelectorAll('.icon');
              const totalIcons = icons.length;
-             const angleIncrement = 360 / totalIcons;
-
-             icons.forEach((icon, index) => {
-                const angle = index * angleIncrement;
-                icon.style.setProperty('--rotation', `${angle}deg`);
-             });
+             if (totalIcons === 1) {
+                icons[0].classList.add('single-icon');
+             } else {
+                const angleIncrement = 360 / totalIcons;
+                icons.forEach((icon, index) => {
+                   const angle = index * angleIncrement;
+                   icon.style.setProperty('--rotation', `${angle}deg`);
+                });
+             }
           });
 
           function isOverlapping(elem1, elem2, minDistance) {
