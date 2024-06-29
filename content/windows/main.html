@@ -194,11 +194,11 @@
         let overlap;
         do {
           const containerHeight = window.innerHeight;
-          const containerWidth = window.innerWidth;
+          const containerWidth = window.innerWidth * 0.8; // Use 80% of the page width
           const maxTop = containerHeight * 0.7 - group.offsetHeight;
-          const maxLeft = containerWidth * 0.7 - group.offsetWidth;
+          const maxLeft = containerWidth - group.offsetWidth;
           const minTop = containerHeight * 0.15;
-          const minLeft = containerWidth * 0.15;
+          const minLeft = containerWidth * 0.1;
   
           const randomTop = Math.random() * (maxTop - minTop) + minTop;
           const randomLeft = Math.random() * (maxLeft - minLeft) + minLeft;
@@ -224,6 +224,7 @@
       positionElements(document.querySelectorAll('.social-group'), 200); // Adjust minimum distance as needed
     });
   </script>
+  
   
   
 

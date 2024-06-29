@@ -6,73 +6,72 @@
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script src="content/js/functions.js"></script>
    <style>
-body {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   height: 100vh;
-   overflow: hidden;
-   position: relative;
-}
-.container {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   width: 100%;
-   position: relative;
-   height: 100vh;
-}
-.center-content {
-   text-align: center;
-   margin-top: 2vh;
-}
-.social-group {
-   position: absolute;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-   width: 150px; /* Adjust as needed */
-}
-.social-links {
-   position: relative;
-   width: 150px;
-   height: 150px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.social-links .icon {
-   --rotation: 0deg;
-   --translation: 35px;
-   position: absolute;
-   width: 25px;
-   height: auto;
-   transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1));
-}
-.social-links .icon:hover {
-   transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1)) scale(1.1);
-}
-.social-links .single-icon {
-   position: static;
-   margin-top: 30px; /* 30px below the center */
-   transform: none !important;
-}
-.social-links .single-icon img {
-   transform: none !important;
-}
-.social-links .single-icon:hover {
-   transform: scale(1.1) !important;
-}
-strong {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-}
-
-    </style>
+      body {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         height: 100vh;
+         overflow: hidden;
+         position: relative;
+      }
+      .container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+         position: relative;
+         height: 100vh;
+      }
+      .center-content {
+         text-align: center;
+         margin-top: 2vh;
+      }
+      .social-group {
+         position: absolute;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         width: 150px; /* Adjust as needed */
+      }
+      .social-links {
+         position: relative;
+         width: 150px;
+         height: 150px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      .social-links .icon {
+         --rotation: 0deg;
+         --translation: 35px;
+         position: absolute;
+         width: 25px;
+         height: auto;
+         transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1));
+      }
+      .social-links .icon:hover {
+         transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1)) scale(1.1);
+      }
+      .social-links .single-icon {
+         position: static;
+         margin-top: 30px; /* 30px below the center */
+         transform: none !important;
+      }
+      .social-links .single-icon img {
+         transform: none !important;
+      }
+      .social-links .single-icon:hover {
+         transform: scale(1.1) !important;
+      }
+      strong {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+   </style>
 </head>
 <body>
    <div class="container">
