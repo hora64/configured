@@ -44,20 +44,11 @@
           height: auto;
       }
       .social-links {
-          position: relative;
-          width: 150px;
-          height: 150px;
           display: flex;
+          gap: 10px;
           justify-content: center;
-          align-items: center;
-      }
-      .social-links .icon {
-          --rotation: 0deg;
-          --translation: 30px;
-          position: absolute;
-          width: 25px;
-          height: auto;
-          transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1));
+          flex-wrap: wrap;
+          margin-top: 10px;
       }
       .list-item a {
           text-decoration: none;
@@ -91,30 +82,30 @@
       <div class="list-row">
         <div class="list-item">
           <div class="social-links">
-            <strong>bou</strong>
-            <a href="https://www.instagram.com/bobbykyho/" class="icon instagram"><img src="" class="icon instagram"></a>
-            <a href="https://www.instagram.com/confrcted/" class="icon instagram"><img src="" class="icon instagram"></a>
+            <a href="#" class="prerenderedText ctnMedia" onclick="loadTabContent('#content', 'content/windows/members/ctnMedia.html')">
+              <img src="" class="prerenderedText ctnMedia" alt="CTN Media">
+            </a>
           </div>
         </div>
         <div class="list-item">
           <div class="social-links">
-            <strong>dracqula</strong>
-            <a href="https://soundcloud.com/osuda" class="icon soundcloud"><img src="" class="icon soundcloud"></a>
-            <a href="https://www.instagram.com/dracula.ki/" class="icon instagram"><img src="" class="icon instagram"></a>
+            <a href="#" class="prerenderedText ctnMusic" onclick="loadTabContent('#content', 'content/windows/members/ctnMusic.html')">
+              <img src="" class="prerenderedText ctnMusic" alt="CTN Music">
+            </a>
           </div>
         </div>
         <div class="list-item">
           <div class="social-links">
-            <strong>dstar</strong>
-            <a href="https://soundcloud.com/user-91792945" class="icon soundcloud"><img src="" class="icon soundcloud"></a>
-            <a href="https://www.instagram.com/dstarmickey/" class="icon instagram"><img src="" class="icon instagram"></a>
+            <a href="#" class="prerenderedText games" onclick="loadTabContent('#content', 'content/windows/members/configuredGames.html')">
+              <img src="" class="prerenderedText games" alt="Configured Games">
+            </a>
           </div>
         </div>
         <div class="list-item">
           <div class="social-links">
-            <strong>golden</strong>
-            <a href="https://www.instagram.com/goldenn.wav/" class="icon instagram"><img src="" class="icon instagram"></a>
-            <a href="https://soundcloud.com/prodgolden" class="icon soundcloud"><img src="" class="icon soundcloud"></a>
+            <a href="#" class="prerenderedText management" onclick="loadTabContent('#content', 'content/windows/members/configuredManagement.html')">
+              <img src="" class="prerenderedText management" alt="Management">
+            </a>
           </div>
         </div>
       </div>
