@@ -6,8 +6,7 @@
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script src="content/js/functions.js"></script>
    <style>
-
-body {
+      body {
           margin: 0;
           padding: 0;
           box-sizing: border-box;
@@ -52,7 +51,6 @@ body {
           height: auto;
           transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1));
       }
-  
   </style>
 </head>
 <body>
@@ -172,8 +170,16 @@ body {
       });
 
       document.querySelectorAll('.social-group').forEach(group => {
-         const randomTop = Math.random() * (window.innerHeight - group.offsetHeight);
-         const randomLeft = Math.random() * (window.innerWidth - group.offsetWidth);
+         const containerHeight = window.innerHeight;
+         const containerWidth = window.innerWidth;
+         const maxTop = containerHeight * 0.7 - group.offsetHeight; // 60% from top and bottom, so 70% for the range
+         const maxLeft = containerWidth * 0.7 - group.offsetWidth; // 60% from left and right, so 70% for the range
+         const minTop = containerHeight * 0.15; // 15% padding from top
+         const minLeft = containerWidth * 0.15; // 15% padding from left
+
+         const randomTop = Math.random() * maxTop + minTop;
+         const randomLeft = Math.random() * maxLeft + minLeft;
+
          group.style.top = `${randomTop}px`;
          group.style.left = `${randomLeft}px`;
       });
