@@ -256,67 +256,72 @@
     </div>
   </div>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.social-links').forEach(socialLinks => {
-         const icons = socialLinks.querySelectorAll('.icon');
-         const totalIcons = icons.length;
-         const angleIncrement = 360 / totalIcons;
+document.addEventListener('DOMContentLoaded', () => {
+  // Function to check if two elements are overlapping
+  function isOverlapping(elem1, elem2, minDistance) {
+     const rect1 = elem1.getBoundingClientRect();
+     const rect2 = elem2.getBoundingClientRect();
+     
+     const dx = rect1.left - rect2.left;
+     const dy = rect1.top - rect2.top;
+     const distance = Math.sqrt(dx * dx + dy * dy);
 
-         icons.forEach((icon, index) => {
-            const angle = index * angleIncrement;
-            icon.style.setProperty('--rotation', `${angle}deg`);
-         });
-      });
+     return distance < minDistance;
+  }
 
-      function isOverlapping(elem1, elem2, minDistance) {
-         const rect1 = elem1.getBoundingClientRect();
-         const rect2 = elem2.getBoundingClientRect();
-         
-         const dx = rect1.left - rect2.left;
-         const dy = rect1.top - rect2.top;
-         const distance = Math.sqrt(dx * dx + dy * dy);
+  // Function to position elements with a minimum distance
+  function positionElements(elements, minDistance) {
+     const containerHeight = window.innerHeight;
+     const containerWidth = window.innerWidth;
+     const maxTop = containerHeight * 0.7;
+     const maxLeft = containerWidth * 0.7;
+     const minTop = containerHeight * 0.15;
+     const minLeft = containerWidth * 0.15;
 
-         return distance < minDistance;
-      }
+     elements.forEach((group, index) => {
+        let attempts = 0;
+        let overlap;
+        do {
+           // Reset the position variables
+           group.style.top = '';
+           group.style.left = '';
 
-      function positionElements(elements, minDistance) {
-         elements.forEach((group, index) => {
-            let attempts = 0;
-            let overlap;
-            do {
-               // Reset the position variables
-               group.style.top = '';
-               group.style.left = '';
+           const randomTop = Math.random() * (maxTop - minTop) + minTop;
+           const randomLeft = Math.random() * (maxLeft - minLeft) + minLeft;
 
-               const containerHeight = window.innerHeight;
-               const containerWidth = window.innerWidth;
-               const maxTop = containerHeight * 0.7 - group.offsetHeight;
-               const maxLeft = containerWidth * 0.7 - group.offsetWidth;
-               const minTop = containerHeight * 0.15;
-               const minLeft = containerWidth * 0.15;
+           group.style.top = `${randomTop}px`;
+           group.style.left = `${randomLeft}px`;
 
-               const randomTop = Math.random() * maxTop + minTop;
-               const randomLeft = Math.random() * maxLeft + minLeft;
+           overlap = false;
+           for (let i = 0; i < index; i++) {
+              if (isOverlapping(group, elements[i], minDistance)) {
+                 overlap = true;
+                 break;
+              }
+           }
 
-               group.style.top = `${randomTop}px`;
-               group.style.left = `${randomLeft}px`;
+           attempts++;
+        } while (overlap && attempts < 100);
+     });
+  }
 
-               overlap = false;
-               for (let i = 0; i < index; i++) {
-                  if (isOverlapping(group, elements[i], minDistance)) {
-                     overlap = true;
-                     break;
-                  }
-               }
+  // Rotate icons around the center
+  document.querySelectorAll('.social-links').forEach(socialLinks => {
+     const icons = socialLinks.querySelectorAll('.icon');
+     const totalIcons = icons.length;
+     const angleIncrement = 360 / totalIcons;
 
-               attempts++;
-            } while (overlap && attempts < 100);
-         });
-      }
+     icons.forEach((icon, index) => {
+        const angle = index * angleIncrement;
+        icon.style.setProperty('--rotation', `${angle}deg`);
+     });
+  });
 
-      const socialGroups = document.querySelectorAll('.social-group');
-      positionElements(socialGroups, 150); // 150px is the minimum distance
-    });
+  // Position social groups with a minimum distance
+  const socialGroups = document.querySelectorAll('.social-group');
+  positionElements(socialGroups, 150); // 150px is the minimum distance
+});
+
   </script>
 </body>
 </html>
