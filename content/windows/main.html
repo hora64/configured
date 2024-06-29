@@ -10,12 +10,19 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
     }
     .container {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
+        height: 100%;
+        overflow-y: auto;
     }
     .center-content {
         text-align: center;
@@ -69,7 +76,7 @@
     }
     .icon {
         --rotation: 0deg;
-        --translation: 50px;
+        --translation: 30px;
         position: absolute;
         width: 25px;
         height: auto;
@@ -86,7 +93,6 @@
     }
   </style>
   <link rel="stylesheet" href="content/css/icons.css">
-  <title>Website</title>
 </head>
 <body>
   <div class="container">
@@ -195,11 +201,11 @@
         let overlap;
         do {
           const containerHeight = window.innerHeight;
-          const containerWidth = window.innerWidth * 0.8; // Use 80% of the page width
+          const containerWidth = window.innerWidth; // Use full page width
           const maxTop = containerHeight * 0.7 - group.offsetHeight;
           const maxLeft = containerWidth - group.offsetWidth;
           const minTop = containerHeight * 0.15;
-          const minLeft = containerWidth * 0.1;
+          const minLeft = 0;
   
           const randomTop = Math.random() * (maxTop - minTop) + minTop;
           const randomLeft = Math.random() * (maxLeft - minLeft) + minLeft;
