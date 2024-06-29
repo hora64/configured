@@ -256,6 +256,7 @@
     </div>
   </div>
   <script>
+    document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.social-links').forEach(socialLinks => {
          const icons = socialLinks.querySelectorAll('.icon');
          const totalIcons = icons.length;
@@ -283,6 +284,10 @@
             let attempts = 0;
             let overlap;
             do {
+               // Reset the position variables
+               group.style.top = '';
+               group.style.left = '';
+
                const containerHeight = window.innerHeight;
                const containerWidth = window.innerWidth;
                const maxTop = containerHeight * 0.7 - group.offsetHeight;
@@ -311,6 +316,7 @@
 
       const socialGroups = document.querySelectorAll('.social-group');
       positionElements(socialGroups, 150); // 150px is the minimum distance
+    });
   </script>
 </body>
 </html>
