@@ -256,37 +256,5 @@
       </div>
     </div>
   </div>
-  <script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Function to rotate icons around the center
-  function rotateIcons() {
-     document.querySelectorAll('.social-links').forEach(socialLinks => {
-        const icons = socialLinks.querySelectorAll('.icon');
-        const totalIcons = icons.length;
-        const angleIncrement = 360 / totalIcons;
-
-        icons.forEach((icon, index) => {
-           const angle = index * angleIncrement;
-           icon.style.setProperty('--rotation', `${angle}deg`);
-        });
-     });
-  }
-
-  // Function to initialize rotating
-  function initializeRotating() {
-     rotateIcons();
-  }
-
-  // Overriding the loadTabContent function to include initialization
-  window.loadTabContent = function(tabId, url) {
-     $(tabId).load(url, () => {
-        initializeRotating();
-     });
-  }
-
-  // Initial call to rotate elements if needed
-  initializeRotating();
-});
-  </script>
 </body>
 </html>
