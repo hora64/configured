@@ -10,87 +10,85 @@
           margin: 0;
           padding: 0;
           box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f0f0f0;
       }
       .container {
           display: flex;
           flex-direction: column;
           align-items: center;
-          height: 100vh;
+          justify-content: center;
+          height: 100%;
       }
       .center-content {
-          text-align: center;
-          margin-top: 2vh;
-      }
-      .scrollable-list {
-          max-height: 100vh;
-          overflow-y: auto;
-          border: 1px solid #ccc;
-          padding: 2vh;
-          margin: 2vh;
-          width: 80vw;
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 0.5em;
-      }
-      .list-row {
           display: flex;
           flex-direction: column;
           align-items: center;
-      }
-      .list-item {
-          display: flex;
           justify-content: center;
-          width: 100%;
-          padding: 0.5em 0;
+          position: relative;
       }
-      .list-item a {
-          text-decoration: none;
-          color: #0066cc;
-          margin: 0 0.5em;
+      .deepglow-button-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
       }
       .social-links {
+          position: absolute;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1em;
+          width: 300px;
+          height: 300px;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+      }
+      .social-links .list-item {
           display: flex;
-          gap: 0.5em;
+          align-items: center;
+          justify-content: center;
+      }
+      .social-links .list-item a {
+          text-decoration: none;
+          color: #0066cc;
+      }
+      .social-links img {
+          width: 40px;
+          height: 40px;
       }
   </style>
 </head>
 <body>
    <div class="container">
       <div class="center-content">
-         <img id="banner" src="content/assets/images/prerenderedText/configured.gif" alt="Banner">
-         <a href="#" class="image-button" onclick="loadTabContent('#content', 'content/windows/main.html')">
-         <img id="deepglow-button" src="content/assets/images/configuredDeepGlow.png" alt="Deep Glow" onmouseover="setupImagePreview(this, 1.1)" onmouseout="setupImagePreview(this, 1)">
-         </a>
-      </div>
-      <div class="scrollable-list">
-         <div class="list-row">
-            <div class="list-item">
-               <a href="https://www.instagram.com/configurxd" class="icon instagram"><img src="" class="icon instagram"></a>
-            </div>
+         <div class="deepglow-button-wrapper">
+            <a href="#" class="image-button" onclick="loadTabContent('#content', 'content/windows/main.html')">
+               <img id="deepglow-button" src="content/assets/images/configuredDeepGlow.png" alt="Deep Glow" onmouseover="setupImagePreview(this, 1.1)" onmouseout="setupImagePreview(this, 1)">
+            </a>
          </div>
-         <div class="list-row">
+         <div class="social-links">
             <div class="list-item">
-               <a href="https://www.youtube.com/@configuredd" class="icon youtube"><img src="" class="icon youtube"></a>
+               <a href="https://www.instagram.com/configurxd" class="icon instagram"><img src="content/assets/images/instagram.png" class="icon instagram" alt="Instagram"></a>
             </div>
-         </div>
-         <div class="list-row">
             <div class="list-item">
-               <a href="https://discord.gg/configured" class="icon discord"><img src="" class="icon discord"></a>
+               <a href="https://www.youtube.com/@configuredd" class="icon youtube"><img src="content/assets/images/youtube.png" class="icon youtube" alt="YouTube"></a>
             </div>
-         </div>
-         <div class="list-row">
             <div class="list-item">
-               <a href="https://x.com/configuredmedia" class="icon twitter"><img src="" class="icon twitter"></a>
+               <a href="https://discord.gg/configured" class="icon discord"><img src="content/assets/images/discord.png" class="icon discord" alt="Discord"></a>
             </div>
-         </div>
-         <div class="list-row">
             <div class="list-item">
-               <a href="https://www.tiktok.com/@configured.media" class="icon tiktok"><img src="" class="icon tiktok"></a>
+               <a href="https://x.com/configuredmedia" class="icon twitter"><img src="content/assets/images/twitter.png" class="icon twitter" alt="Twitter"></a>
             </div>
-         </div>
-         <div class="list-row">
             <div class="list-item">
-               <a href="https://soundcloud.com/configuredctn" class="icon soundcloud"><img src="" class="icon soundcloud"></a>
+               <a href="https://www.tiktok.com/@configured.media" class="icon tiktok"><img src="content/assets/images/tiktok.png" class="icon tiktok" alt="TikTok"></a>
+            </div>
+            <div class="list-item">
+               <a href="https://soundcloud.com/configuredctn" class="icon soundcloud"><img src="content/assets/images/soundcloud.png" class="icon soundcloud" alt="SoundCloud"></a>
             </div>
          </div>
       </div>
