@@ -17,8 +17,8 @@ jobs:
 
     - name: Copy Content Folder to Configured Media Folder
       run: |
-        mkdir -p configured.media
-        cp -r content configured.media/
+        mkdir -p configured.media/content
+        cp -r content/* configured.media/content/
 
     - name: Copy Index.html to Configured Media Folder
       run: |
