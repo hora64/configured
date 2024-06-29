@@ -10,6 +10,9 @@
           margin: 0;
           padding: 0;
           box-sizing: border-box;
+          height: 100vh;
+          overflow: hidden;
+          position: relative;
       }
       .container {
           display: flex;
@@ -22,16 +25,15 @@
           margin-top: 2vh;
       }
       .list-row {
-          position: relative;
+          position: absolute;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
           text-align: center;
-          margin: 2vh 0;
+          width: 150px; /* Adjust as needed */
       }
       .list-item {
-          position: relative;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -174,6 +176,13 @@
             const angle = index * angleIncrement;
             icon.style.setProperty('--rotation', `${angle}deg`);
          });
+      });
+
+      document.querySelectorAll('.list-row').forEach(row => {
+         const randomTop = Math.random() * (window.innerHeight - row.offsetHeight);
+         const randomLeft = Math.random() * (window.innerWidth - row.offsetWidth);
+         row.style.top = `${randomTop}px`;
+         row.style.left = `${randomLeft}px`;
       });
    </script>
 </body>
