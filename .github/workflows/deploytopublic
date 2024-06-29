@@ -1,0 +1,34 @@
+name: Deploy to Public
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Remove Old Public Folder Contents
+      run: |
+        rm -rf public/*
+
+    - name: Copy Content to Public Folder
+      run: |
+        cp -r content/* public/
+
+    - name: Copy Index.html to Public Folder
+      run: |
+        cp index.html public/
+
+    - name: Commit Changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add public/
+        git commit -m "Deploy content to public folder"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
