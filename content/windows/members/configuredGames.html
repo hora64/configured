@@ -15,41 +15,48 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          height: 60vh; /* 60% of the viewport height */
+          height: 80vh; /* 40% of the viewport height */
       }
       .center-content {
           text-align: center;
           margin-top: 2vh;
       }
       .scrollable-list {
-          max-height: 40vh; /* Adjust to fit within 40vh container */
+          max-height: 100vh; /* Adjust to fit within 40vh container */
           overflow-y: auto;
           border: 1px solid #ccc;
           padding: 2vh;
           margin: 2vh;
           width: 80vw;
           display: grid;
-          grid-template-columns: repeat(3, 1fr); /* 3 columns for better spacing */
-          gap: 0.5em; /* Adjust the gap between items */
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.25em; /* Adjust the gap between items */
       }
       .list-row {
           display: flex;
           flex-direction: column;
           align-items: center;
       }
-      .list-item {
+    .list-item {
           display: flex;
           justify-content: center;
           width: 100%;
-          padding: 0.5em 0; /* Use padding to reduce spacing */
+          padding: 0.25em 0; /* Use padding to reduce spacing */
       }
       .list-item a {
           text-decoration: none;
-          margin: 0 8px; /* Add margin to space out the links */
+          color: #0066cc;
+          margin: 0 16px; /* Add margin to space out the links */
+      }
+      .social-links {
+          display: flex;
+          gap: 0.5em;
+      }
+      .social-links img {
+          width: 64px;
+          height: 64px;
       }
   </style>
-  <title>Your Website Title</title>
-  <meta name="description" content="A brief description of your webpage for better SEO">
 </head>
 <body>
    <div class="container">
