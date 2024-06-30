@@ -70,11 +70,11 @@
 .prerenderedText.ctnMedia:hover img {
     content: url('../assets/images/prerenderedText/ctnMediaHover.gif');
 }
-.prerenderedText.ctnMusic img {
-    content: url('../assets/images/prerenderedText/ctnMusic.gif');
+.icon.ctnMusic img {
+    content: url('../assets/images/icons/ctnMusic.png');
 }
-.prerenderedText.ctnMusic:hover img {
-    content: url('../assets/images/prerenderedText/ctnMusicHover.gif');
+.icon.ctnMusic:hover img {
+    content: url('../assets/images/icons/ctnMusicHover.gif');
 }
 .prerenderedText.games img {
     content: url('../assets/images/prerenderedText/games.gif');

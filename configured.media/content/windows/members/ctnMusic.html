@@ -15,14 +15,14 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          height: 100vh;
+          height: 80vh; /* 40% of the viewport height */
       }
       .center-content {
           text-align: center;
           margin-top: 2vh;
       }
       .scrollable-list {
-          max-height: 100vh;
+          max-height: 100vh; /* Adjust to fit within 40vh container */
           overflow-y: auto;
           border: 1px solid #ccc;
           padding: 2vh;
@@ -30,27 +30,31 @@
           width: 80vw;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 0.5em;
+          gap: 0.25em; /* Adjust the gap between items */
       }
       .list-row {
           display: flex;
           flex-direction: column;
           align-items: center;
       }
-      .list-item {
+    .list-item {
           display: flex;
           justify-content: center;
           width: 100%;
-          padding: 0.5em 0;
+          padding: 0.25em 0; /* Use padding to reduce spacing */
       }
       .list-item a {
           text-decoration: none;
           color: #0066cc;
-          margin: 0 0.5em;
+          margin: 0 16px; /* Add margin to space out the links */
       }
       .social-links {
           display: flex;
           gap: 0.5em;
+      }
+      .social-links img {
+          width: 64px;
+          height: 64px;
       }
   </style>
 </head>
