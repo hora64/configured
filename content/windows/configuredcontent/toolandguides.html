@@ -12,49 +12,69 @@
          background-color: #f4f4f4;
          margin: 0;
          padding: 0;
+         font-family: Arial, sans-serif;
       }
       .container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          height: 80vh;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         min-height: 100vh;
+         padding: 20px;
+         box-sizing: border-box;
       }
       .center-content {
-          text-align: center;
-          margin-top: 20px;
+         text-align: center;
+         margin-bottom: 20px;
       }
       .scrollable-list {
-          max-height: 400px;
-          overflow-y: auto;
-          border: 1px solid #ccc;
-          padding: 10px;
-          margin: 20px;
-          width: 80%;
-          display: grid;
-          grid-template-columns: repeat(3, 1fr); /* Three columns */
-          gap: 2px; /* Adjust the gap between items */
+         max-height: 400px;
+         overflow-y: auto;
+         border: 1px solid #ccc;
+         padding: 10px;
+         margin: 20px;
+         width: 80%;
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+         gap: 10px; /* Adjust the gap between items */
+         background-color: #fff;
+         border-radius: 8px;
       }
       .list-row {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
       }
       .list-item {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius: 8px;
-          background-color: transparent;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+         padding: 10px;
+         border: 1px solid #ccc;
+         border-radius: 8px;
+         background-color: #fafafa;
+         transition: background-color 0.3s;
+         cursor: pointer;
+      }
+      .list-item:hover {
+         background-color: #e0e0e0;
+      }
+      .list-item img {
+         width: 40px;
+         height: 40px;
+         margin-bottom: 5px;
+      }
+      .list-item strong {
+         margin-bottom: 5px;
+      }
+      legend {
+         font-size: 1.2em;
+         font-weight: bold;
+         margin: 10px 0;
       }
    </style>
 </head>
-
-
-
 <body>
    <div class="container">
       <div class="center-content">
@@ -64,89 +84,74 @@
          </a>
       </div>
       <div class="scrollable-list">
-         <div class="list-row">
-          <legend>Software</legend>
-            <div class="list-item">
-               <strong>BlenderUmap</strong>
-               <a href="https://discord.gg/5zWATGHHrK" class="icon discord">
-                  <img src="" alt="Discord" class="icon-img">
-               </a>
-               <strong>FModel</strong>
-               <a href="https://discord.gg/fmodel" class="icon discord">
-                  <img src="" alt="Discord" class="icon-img">
-               </a>
-               <strong>Fortnite Porting</strong>
-               <a href="https://discord.gg/fortniteporting" class="icon discord">
-                  <img src="" alt="Discord" class="icon-img">
-               </a>
-               <strong>Reshade</strong>
-               <a href="https://www.reshade.me/" class="icon website">
-                  <img src="" alt="Website" class="icon-img">
-               </a>
-               <strong>Normal Map Generator</strong>
-               <a href="https://cpetry.github.io/NormalMap-Online/" class="icon website">
-                  <img src="" alt="Website" class="icon-img">
-               </a>
-               <strong>Reboot Launcher</strong>
-               <a href="https://github.com/Auties00/reboot_launcher/releases" class="icon website">
-                  <img src="" alt="Website" class="icon-img">
-               </a>
-               <strong>Newest Server DLL (6/10/24)</strong>
-               <a href="https://discord.com/channels/998020695223193670/1042567831570616431/1249822622078992435" class="icon website">
-                  <img src="" alt="Website" class="icon-img">
-               </a>
-               <strong>Fortnite IDs</strong>
-               <a href="https://docs.google.com/spreadsheets/d/1gVDgnzNyMCafIWa-dBO3mgNUHmHzgA9O5sWbfQy2Yfg/edit#gid=0" class="icon website">
-                  <img src="" alt="Website" class="icon-img">
-               </a>
-               <strong>Reboot Server Commands</strong>
-               <a href="https://pastebin.com/4pmMgegz" class="icon website">
-                  <img src="" alt="Website" class="icon-img">
-               </a>
-            </div>
+         <legend>Software</legend>
+         <div class="list-item" onclick="window.location.href='https://discord.gg/5zWATGHHrK'">
+            <strong>BlenderUmap</strong>
+            <img src="content/assets/images/discord-icon.png" alt="Discord">
          </div>
-         <div class="list-row">
-            <div class="list-item">
-               <strong>Extremely Large Clip Drive</strong>
-               <a href="https://drive.google.com/drive/folders/1zgjFfnUEfOj3L8-dlG7t8RjE2XuZnzTq?usp=drive_link" class="icon website">
-                  <img src="" alt="Website" class="icon-img">
-               </a>
-               <strong>Drive Clip Request</strong>
-               <a href="https://forms.gle/wjQPGjzBv68Uj1yV6" class="icon website">
-                  <img src="" alt="Website" class="icon-img">
-               </a>
-            </div>
+         <div class="list-item" onclick="window.location.href='https://discord.gg/fmodel'">
+            <strong>FModel</strong>
+            <img src="content/assets/images/discord-icon.png" alt="Discord">
          </div>
-         <div class="list-row">
+         <div class="list-item" onclick="window.location.href='https://discord.gg/fortniteporting'">
+            <strong>Fortnite Porting</strong>
+            <img src="content/assets/images/discord-icon.png" alt="Discord">
+         </div>
+         <div class="list-item" onclick="window.location.href='https://www.reshade.me/'">
+            <strong>Reshade</strong>
+            <img src="content/assets/images/website-icon.png" alt="Website">
+         </div>
+         <div class="list-item" onclick="window.location.href='https://cpetry.github.io/NormalMap-Online/'">
+            <strong>Normal Map Generator</strong>
+            <img src="content/assets/images/website-icon.png" alt="Website">
+         </div>
+         <div class="list-item" onclick="window.location.href='https://github.com/Auties00/reboot_launcher/releases'">
+            <strong>Reboot Launcher</strong>
+            <img src="content/assets/images/website-icon.png" alt="Website">
+         </div>
+         <div class="list-item" onclick="window.location.href='https://discord.com/channels/998020695223193670/1042567831570616431/1249822622078992435'">
+            <strong>Newest Server DLL (6/10/24)</strong>
+            <img src="content/assets/images/website-icon.png" alt="Website">
+         </div>
+         <div class="list-item" onclick="window.location.href='https://docs.google.com/spreadsheets/d/1gVDgnzNyMCafIWa-dBO3mgNUHmHzgA9O5sWbfQy2Yfg/edit#gid=0'">
+            <strong>Fortnite IDs</strong>
+            <img src="content/assets/images/website-icon.png" alt="Website">
+         </div>
+         <div class="list-item" onclick="window.location.href='https://pastebin.com/4pmMgegz'">
+            <strong>Reboot Server Commands</strong>
+            <img src="content/assets/images/website-icon.png" alt="Website">
+         </div>
+         <legend>Other Resources</legend>
+         <div class="list-item" onclick="window.location.href='https://drive.google.com/drive/folders/1zgjFfnUEfOj3L8-dlG7t8RjE2XuZnzTq?usp=drive_link'">
+            <strong>Extremely Large Clip Drive</strong>
+            <img src="content/assets/images/website-icon.png" alt="Website">
+         </div>
+         <div class="list-item" onclick="window.location.href='https://forms.gle/wjQPGjzBv68Uj1yV6'">
+            <strong>Drive Clip Request</strong>
+            <img src="content/assets/images/website-icon.png" alt="Website">
+         </div>
          <legend>Tutorials</legend>
-            <div class="list-item">
-               <strong>Watch Reshade Tutorial</strong>
-               <a href="https://www.youtube.com/watch?v=kT9-wZ-Yqag" class="icon youtube">
-                  <img src="" alt="YouTube" class="icon-img">
-               </a>
-               <strong>Reboot Discord Server</strong>
-               <a href="https://discord.gg/reboot" class="icon discord">
-                  <img src="" alt="Discord" class="icon-img">
-               </a>
-               <strong>Tutorial</strong>
-               <a href="https://www.youtube.com/watch?v=3Bwu2pFiFlI" class="icon youtube">
-                  <img src="" alt="YouTube" class="icon-img">
-               </a>
-               <strong>Skins from Lobby (Doesn't Work in Multiplayer)</strong>
-               <a href="https://www.youtube.com/watch?v=qhD7AT5McgQ" class="icon youtube">
-                  <img src="" alt="YouTube" class="icon-img">
-               </a>
-               <strong>Reboot Server Events</strong>
-               <a href="https://www.youtube.com/watch?v=-RzkhyG3ucg" class="icon youtube">
-                  <img src="" alt="YouTube" class="icon-img">
-               </a>
-            </div>
+         <div class="list-item" onclick="window.location.href='https://www.youtube.com/watch?v=kT9-wZ-Yqag'">
+            <strong>Watch Reshade Tutorial</strong>
+            <img src="content/assets/images/youtube-icon.png" alt="YouTube">
+         </div>
+         <div class="list-item" onclick="window.location.href='https://discord.gg/reboot'">
+            <strong>Reboot Discord Server</strong>
+            <img src="content/assets/images/discord-icon.png" alt="Discord">
+         </div>
+         <div class="list-item" onclick="window.location.href='https://www.youtube.com/watch?v=3Bwu2pFiFlI'">
+            <strong>Tutorial</strong>
+            <img src="content/assets/images/youtube-icon.png" alt="YouTube">
+         </div>
+         <div class="list-item" onclick="window.location.href='https://www.youtube.com/watch?v=qhD7AT5McgQ'">
+            <strong>Skins from Lobby (Doesn't Work in Multiplayer)</strong>
+            <img src="content/assets/images/youtube-icon.png" alt="YouTube">
+         </div>
+         <div class="list-item" onclick="window.location.href='https://www.youtube.com/watch?v=-RzkhyG3ucg'">
+            <strong>Reboot Server Events</strong>
+            <img src="content/assets/images/youtube-icon.png" alt="YouTube">
          </div>
       </div>
    </div>
 </body>
-
-
-
-
 </html>
