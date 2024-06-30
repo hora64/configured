@@ -76,20 +76,14 @@
     }
     .icon {
         --rotation: 0deg;
-        --translation: 30px;
+        --translation: 0px;
         position: absolute;
-        width: 25px;
+        width: 128px;
         height: auto;
         transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1));
     }
     .icon:hover {
         transform: rotate(var(--rotation)) translate(var(--translation)) rotate(calc(var(--rotation) * -1)) scale(1.2);
-    }
-    .single-icon {
-        position: absolute;
-        top: 30px;
-        left: 50%;
-        transform: translateX(-50%) !important;
     }
   </style>
   <link rel="stylesheet" href="content/css/icons.css">
