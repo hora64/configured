@@ -71,7 +71,7 @@
     content: url('../assets/images/prerenderedText/ctnMediaHover.gif');
 }
 .prerenderedText.ctnMusic img {
-    content: url('../assets/images/prerenderedText/ctnMusic.gif');
+    content: url('../assets/images/prerenderedText/ctnMusic.png');
 }
 .prerenderedText.ctnMusic:hover img {
     content: url('../assets/images/prerenderedText/ctnMusicHover.gif');
