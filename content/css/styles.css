@@ -13,6 +13,13 @@
     --secondary-color: #4CAF50; /* Example secondary color */
     --secondary-color-dark: #388E3C; /* Example dark secondary color */
 }
+/* Apply to the entire document */
+* {
+    -webkit-user-select: none; /* Chrome, Safari, and Opera */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Non-prefixed version, currently supported by most modern browsers */
+}
 
 html, body {
     height: 100%;
@@ -85,8 +92,8 @@ button:hover {
 }
 
 #deepglow-button {
-    width: 100px; /* Increased width */
-    height: 100px; /* Adjust height if needed */
+    width: 128px; /* Increased width */
+    height: auto; /* Adjust height if needed */
     cursor: pointer;
 }
 
