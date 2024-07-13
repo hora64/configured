@@ -88,16 +88,23 @@
 .prerenderedText.management:hover img {
     content: url('../assets/images/prerenderedText/managementHover.gif');
 }
-.prerenderedText.info img {
+.icon.info img {
     content: url('../assets/images/icons/info.png');
 }
-.prerenderedText.info:hover img {
+.icon.info:hover img {
     content: url('../assets/images/icons/infoHover.gif');
 }
-.prerenderedText.toolandguides img {
+.icon.toolandguides img {
     content: url('../assets/images/icons/toolsGuides.png');
 }
-.prerenderedText.toolandguides:hover img {
+.icon.toolandguides:hover img {
     content: url('../assets/images/icons/toolsGuidesHover.gif');
+}
+
+.icon.ultco img {
+    content: url('../assets/images/icons/ultco.png');
+}
+.icon.ultco:hover img {
+    content: url('../assets/images/icons/ultcoHover.png');
 }
 
