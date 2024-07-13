@@ -29,10 +29,10 @@
     content: url('../assets/images/icons/tiktokHover.gif');
 }
 .icon.youtube img {
-    content: url('../assets/images/icons/youtube.gif');
+    content: url('../assets/images/icons/youtube.png');
 }
 .icon.youtube:hover img {
-    content: url('../assets/images/icons/youtubeHover.gif');
+    content: url('../assets/images/icons/youtubeHover.png');
 }
 .icon.instagram img {
     content: url('../assets/images/icons/instagram.gif');
@@ -88,16 +88,23 @@
 .prerenderedText.management:hover img {
     content: url('../assets/images/prerenderedText/managementHover.gif');
 }
-.prerenderedText.info img {
-    content: url('../assets/images/prerenderedText/info.gif');
+.icon.info img {
+    content: url('../assets/images/icons/info.png');
 }
-.prerenderedText.info:hover img {
-    content: url('../assets/images/prerenderedText/infoHover.gif');
+.icon.info:hover img {
+    content: url('../assets/images/icons/infoHover.gif');
 }
-.prerenderedText.toolandguides img {
-    content: url('../assets/images/prerenderedText/toolsandguides.gif');
+.icon.toolandguides img {
+    content: url('../assets/images/icons/toolsGuides.png');
 }
-.prerenderedText.toolandguides:hover img {
-    content: url('../assets/images/prerenderedText/toolsandguidesHover.gif');
+.icon.toolandguides:hover img {
+    content: url('../assets/images/icons/toolsGuidesHover.gif');
+}
+
+.icon.ultco img {
+    content: url('../assets/images/icons/ultco.png');
+}
+.icon.ultco:hover img {
+    content: url('../assets/images/icons/ultcoHover.png');
 }
 
