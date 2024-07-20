@@ -29,10 +29,10 @@
     content: url('../assets/images/icons/tiktokHover.gif');
 }
 .icon.youtube img {
-    content: url('../assets/images/icons/youtube.png');
+    content: url('../assets/images/icons/youtube.gif');
 }
 .icon.youtube:hover img {
-    content: url('../assets/images/icons/youtubeHover.png');
+    content: url('../assets/images/icons/youtubeHover.gif');
 }
 .icon.instagram img {
     content: url('../assets/images/icons/instagram.gif');
@@ -58,11 +58,11 @@
 .icon.website:hover img {
     content: url('../assets/images/icons/websiteHover.gif');
 }
-.prerenderedText.assets img {
-    content: url('../assets/images/prerenderedText/assets.gif');
+.icon.assets img {
+    content: url('../assets/images/icons/assets.png');
 }
-.prerenderedText.assets:hover img {
-    content: url('../assets/images/prerenderedText/assetsHover.gif');
+.icon.assets:hover img {
+    content: url('../assets/images/icons/assetsHover.gif');
 }
 .prerenderedText.ctnMedia img {
     content: url('../assets/images/prerenderedText/ctnMedia.gif');
@@ -76,11 +76,11 @@
 .icon.ctnMusic:hover img {
     content: url('../assets/images/icons/ctnMusicHover.gif');
 }
-.prerenderedText.games img {
-    content: url('../assets/images/prerenderedText/games.gif');
+.icon.games img {
+    content: url('../assets/images/icons/games.png');
 }
-.prerenderedText.games:hover img {
-    content: url('../assets/images/prerenderedText/gamesHover.gif');
+.icons.games:hover img {
+    content: url('../assets/images/icons/gamesHover.gif');
 }
 .prerenderedText.management img {
     content: url('../assets/images/prerenderedText/management.gif');
@@ -102,9 +102,15 @@
 }
 
 .icon.ultco img {
-    content: url('../assets/images/icons/ultco.png');
+    content: url('../assets/images/icons/ultco.gif');
 }
 .icon.ultco:hover img {
-    content: url('../assets/images/icons/ultcoHover.png');
+    content: url('../assets/images/icons/ultcoHover.gif');
+}
+.icon.inquiries img {
+    content: url('../assets/images/icons/inquiries.png');
+}
+.icon.inquiries:hover img {
+    content: url('../assets/images/icons/inquiriesHover.gif');
 }
 
