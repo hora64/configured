@@ -58,10 +58,10 @@
 .icon.website:hover img {
     content: url('../assets/images/icons/websiteHover.gif');
 }
-.prerenderedText.assets img {
+.icon.assets img {
     content: url('../assets/images/icons/assets.png');
 }
-.prerenderedText.assets:hover img {
+.icon.assets:hover img {
     content: url('../assets/images/icons/assetsHover.gif');
 }
 .prerenderedText.ctnMedia img {
