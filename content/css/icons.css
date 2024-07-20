@@ -59,10 +59,10 @@
     content: url('../assets/images/icons/websiteHover.gif');
 }
 .prerenderedText.assets img {
-    content: url('../assets/images/prerenderedText/assets.gif');
+    content: url('../assets/images/icons/assets.png');
 }
 .prerenderedText.assets:hover img {
-    content: url('../assets/images/prerenderedText/assetsHover.gif');
+    content: url('../assets/images/icons/assetsHover.gif');
 }
 .prerenderedText.ctnMedia img {
     content: url('../assets/images/prerenderedText/ctnMedia.gif');
