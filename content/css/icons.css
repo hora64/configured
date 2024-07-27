@@ -64,11 +64,11 @@
 .icon.assets:hover img {
     content: url('../assets/images/icons/assetsHover.gif');
 }
-.prerenderedText.ctnMedia img {
-    content: url('../assets/images/prerenderedText/ctnMedia.gif');
+.icon.ctnMedia img {
+    content: url('../assets/images/icons/ctnMedia.gif');
 }
-.prerenderedText.ctnMedia:hover img {
-    content: url('../assets/images/prerenderedText/ctnMediaHover.gif');
+.icon.ctnMedia:hover img {
+    content: url('../assets/images/icons/ctnMediaHover.gif');
 }
 .icon.ctnMusic img {
     content: url('../assets/images/icons/ctnMusic.png');
@@ -82,11 +82,11 @@
 .icons.games:hover img {
     content: url('../assets/images/icons/gamesHover.gif');
 }
-.prerenderedText.management img {
-    content: url('../assets/images/prerenderedText/management.gif');
+.icons.management img {
+    content: url('../assets/images/icons/management.gif');
 }
-.prerenderedText.management:hover img {
-    content: url('../assets/images/prerenderedText/managementHover.gif');
+.icons.management:hover img {
+    content: url('../assets/images/icons/managementHover.gif');
 }
 .icon.info img {
     content: url('../assets/images/icons/info.png');
