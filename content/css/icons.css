@@ -79,13 +79,13 @@
 .icon.games img {
     content: url('../assets/images/icons/games.png');
 }
-.icons.games:hover img {
+.icon.games:hover img {
     content: url('../assets/images/icons/gamesHover.gif');
 }
-.icons.management img {
+.icon.management img {
     content: url('../assets/images/icons/management.gif');
 }
-.icons.management:hover img {
+.icon.management:hover img {
     content: url('../assets/images/icons/managementHover.gif');
 }
 .icon.info img {
