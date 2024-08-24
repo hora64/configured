@@ -18,22 +18,34 @@
         "title": "aquafina"
     },
     {
-        "url": "content/assets/audio/music/2dane.mp3",
-        "defaultName": "2dane",
-        "artist": "boredsv/ivvy2k",
-        "title": "2dane"
+        "url": "content/assets/audio/music/Cuck Boy.mp3",
+        "defaultName": "Cuck Boy",
+        "artist": "kts.von",
+        "title": "cuck boy"
     },
     {
-        "url": "content/assets/audio/music/thatfatmf-ktsvon-rituals.wav",
-        "defaultName": "Fuck that fat n****",
-        "artist": "kts.von ",
-        "title": "Fuck that fat n****"
+        "url": "content/assets/audio/music/Mystic DA Kid(1).mp3",
+        "defaultName": "btc coded configured",
+        "artist": "Mystic DA Kid",
+        "title": "btc coded configured"
     },
     {
-        "url": "configured.media/content/assets/audio/music/howtogetmiddlepartoutyadreads-rituals.mp3",
-        "defaultName": "how to remove middle part dreads",
-        "artist": "goldenn.wav",
-        "title": "how to remove middle part dreads"
-    }
+        "url": "content/assets/audio/music/Fuck that fat nigga - ktsvon.mp3",
+        "defaultName": "ftfn",
+        "artist": "kts.von",
+        "title": "ftfn"
+    },
+    {
+        "url": "content/assets/audio/music/configured beat osuda x numb 163bpm.mp3",
+        "defaultName": "configured beat",
+        "artist": "osuda x numb",
+        "title": "configured beat"
+    },
+    {
+        "url": "content/assets/audio/music/conradio fm (mdk) (170bpm) (A flat major) - Mystic DA Kid(1).mp3",
+        "defaultName": "conradio fm",
+        "artist": "Mystic DA Kid",
+        "title": "conradio fm"
+    },
 
 ]
